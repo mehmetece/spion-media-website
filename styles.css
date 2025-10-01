@@ -159,7 +159,6 @@ body {
     max-width: 180px;
     width: 100%;
     transform: scale(1) rotate(0deg);
-    box-shadow: 0 4px 16px rgba(46,204,113,0.10);
   }
 }
 
