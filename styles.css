@@ -504,6 +504,8 @@ button.next {
     cursor: pointer;
     font-size: 0.9em;
     margin-top: auto;
+    margin: 10px;
+    border-radius: 5%;
     /* Bu satır butonu en alta sabitler */
 }
 

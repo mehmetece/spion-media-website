@@ -230,4 +230,12 @@ ScrollReveal().reveal('.last-fot', {
   delay: 300,
   reset: true,
 });
+
+ScrollReveal().reveal('h1', {
+  origin: 'bottom',
+  distance: '80px',
+  duration: 2200,
+  delay: 300,
+  reset: true,
+});
 // SCROLL SECTION
