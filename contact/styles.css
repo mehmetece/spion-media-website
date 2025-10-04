@@ -548,6 +548,106 @@ button.next {
 /* Slider SECTION */
 
 
+/* CONTACT & CAREERS */
+.contact-career{
+  background: var(--background-color);
+  padding: 40px 20px 60px;
+}
+.cc-wrap{
+  max-width: 1100px; margin: 0 auto; display: grid; gap: 22px;
+}
+.cc-card{
+  background: #fff;
+  border: 1px solid #e7e5ea;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 22px rgba(0,0,0,.06);
+}
+.cc-header{ margin-bottom: 12px; }
+.cc-eyebrow{
+  color: var(--paragraph-color);
+  letter-spacing: .12em; text-transform: uppercase;
+  font-size: .82rem; margin-bottom: 6px;
+}
+.cc-title{
+  color: var(--text-color);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  margin: 0 0 6px 0;
+}
+.cc-lead{ color: var(--paragraph-color); max-width: 70ch; }
+
+.cc-grid{
+  display: grid; gap: 18px;
+  grid-template-columns: 1.1fr .9fr;
+}
+@media (max-width: 900px){
+  .cc-grid{ grid-template-columns: 1fr; }
+}
+
+.cc-info{}
+.cc-subtitle{ margin: 6px 0 10px; color: var(--text-color); }
+.cc-list{ margin: 0 0 12px 0; }
+.cc-list li{ margin: 6px 0; color: var(--paragraph-color); }
+.cc-list a{ color: var(--bold-color); }
+
+.cc-social{ display:flex; gap:12px; margin-top: 10px; }
+.cc-social a{ color: var(--text-color); font-size: 18px; }
+.cc-social a:hover{ color: var(--hover-color); }
+
+.cc-form{ display: grid; gap: 12px; }
+.row-2{ display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+@media (max-width: 640px){
+  .row-2{ grid-template-columns: 1fr; }
+}
+
+.field{ display: flex; flex-direction: column; gap: 6px; }
+.field label{ font-size: .9rem; color: var(--text-color); }
+.field input,
+.field select,
+.field textarea{
+  border: 1px solid #dedbe4;
+  background: var(--special-color);
+  color: #111;
+  padding: 12px 12px;
+  border-radius: 8px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color .2s ease, background .2s ease;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color: var(--bold-color);
+  background: #fff;
+}
+
+.actions{ display: flex; gap: 10px; align-items: center; margin-top: 4px; flex-wrap: wrap; }
+.btn-primary{
+  background: var(--bold-color);
+  color: #fff;
+  border: 1px solid var(--bold-color);
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .06s ease, background .3s ease;
+}
+.btn-primary:hover{ background: var(--hover-color); transform: translateY(-1px); }
+
+.btn-ghost{
+  background: transparent;
+  color: var(--bold-color);
+  border: 1px solid var(--bold-color);
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hint{ color: #6f6a75; font-size: .86rem; }
+
+
+
 /* Music Button */
 
 .music-button {

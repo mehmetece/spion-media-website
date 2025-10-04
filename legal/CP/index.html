@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Spion Army — Çerez (Cookie) Politikası</title>
+    <meta name="description"
+        content="Spion Army’de çerezleri nasıl kullandığımız, hangi verileri topladığımız ve tercihlerinizi nasıl yönetebileceğiniz hakkında şeffaf açıklama." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta http-equiv="content-language" content="tr" />
+    <meta name="theme-color" content="#e6e1e9" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Spion Army" />
+    <meta property="og:title" content="Spion Army — Çerez (Cookie) Politikası" />
+    <meta property="og:description" content="Çerezleri nasıl kullandığımız ve yönetim seçenekleriniz." />
+    <meta property="og:url" content="https://www.spionarmy.com.tr/legal/CP/" />
+    <meta property="og:image" content="https://www.spionarmy.com.tr/images/og/og-cover.jpg" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../images/logos/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="../../images/logos/favicon.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="../../images/logos/apple-touch-icon.png" />
+
+    <!-- Page CSS (same folder) -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        :root {
+            --ink: #0f1115;
+            --muted: #6b7280;
+            --paper: #ffffff;
+            --line: #e5e7eb;
+            --accent: #7c5cff;
+            --accent-ink: #fff;
+            --ok: #16a34a;
+            --warn: #b45309;
+            --chip: #f3f4f6;
+        }
+
+        .legal-hero {
+            max-width: 1000px;
+            margin: 24px auto 10px;
+            padding: 0 20px;
+        }
+
+        .legal-hero h1 {
+            font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+            margin: 10px 0 4px;
+        }
+
+        .legal-hero p {
+            color: var(--muted);
+            margin: 0
+        }
+
+        .updated {
+            font-size: .9rem;
+            color: var(--muted)
+        }
+
+        .legal-wrap {
+            max-width: 1000px;
+            margin: 16px auto 64px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 18px;
+        }
+
+        @media (max-width: 960px) {
+            .legal-wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .toc {
+            position: sticky;
+            top: 18px;
+            align-self: start;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 14px;
+        }
+
+        .toc h3 {
+            margin: 0 0 8px;
+            font-size: 1rem;
+        }
+
+        .toc a {
+            display: block;
+            padding: 8px 10px;
+            border-radius: 10px;
+            color: #111;
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+
+        .toc a:hover {
+            background: #f9fafb;
+            border-color: var(--line)
+        }
+
+        .toc .small {
+            color: var(--muted);
+            font-size: .86rem;
+            margin: 2px 0 0 10px
+        }
+
+        .card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 14px;
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            margin: 0 0 6px;
+        }
+
+        .card p {
+            color: #1f2937;
+            line-height: 1.7;
+            margin: .4rem 0;
+        }
+
+        .list {
+            padding-left: 18px;
+            margin: 8px 0;
+        }
+
+        .note {
+            font-size: .92rem;
+            color: #334155;
+            background: #f8fafc;
+            border-left: 4px solid var(--accent);
+            padding: 10px 12px;
+            border-radius: 8px;
+            margin: 8px 0;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: .82rem;
+            margin: 4px 6px 0 0;
+            background: var(--chip);
+            border: 1px solid var(--line);
+        }
+
+        .ok {
+            color: var(--ok);
+            font-weight: 700
+        }
+
+        .warn {
+            color: var(--warn);
+            font-weight: 700
+        }
+
+        details {
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 10px 12px;
+            background: #fff;
+            margin: 10px 0;
+        }
+
+        details summary {
+            cursor: pointer;
+            font-weight: 700;
+            outline: none;
+        }
+
+        details[open] {
+            box-shadow: 0 10px 18px rgba(0, 0, 0, .06);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+        }
+
+        th,
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+        }
+
+        th {
+            background: #fafafa;
+            font-weight: 700
+        }
+
+        tr:last-child td {
+            border-bottom: none
+        }
+
+        code {
+            background: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            padding: 2px 6px;
+            border-radius: 6px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: var(--accent);
+            color: var(--accent-ink);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 10px 14px;
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        .btn--ghost {
+            background: transparent;
+            color: var(--accent);
+            border-color: var(--accent)
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="../../images/logos/square.png" alt="Resim Bulunamadı">
+            <h1 class="logo-text">Spion Army</h1>
+        </div>
+        <div class="navbar-list">
+            <ul class="list-item">
+                <li><a href="../../index.html">Spion Army</a></li>
+                <li><a href="../../froggpt/index.html">Portföy</a></li>
+                <li><a href="../../purplestore/index.html">Medya Store</a></li>
+                <li class="hide-item"><a href="../../contact/index.html">İletişim</a></li>
+                <li class="respo"><a href="#">Daha Fazla<i class="fa-solid fa-chevron-down"></i></a></li>
+            </ul>
+        </div>
+        <div class="last-nav">
+            <h1 class="user-text"><a href="../../career/index.html">Bize Katıl</a></h1>
+            <a href="../../career/index.html"><i class="fa-solid fa-plus"></i></a>
+        </div>
+    </nav>
+
+    <div class="hidebar-list">
+        <ul class="h-list-item">
+            <li><a href="../../contact/index.html">İletişim</a></li>
+        </ul>
+    </div>
+
+    <div class="sidebar">
+        <div class="hide-btn">
+            <i class="fa-solid fa-bars open-icon"></i>
+            <i class="fa-solid fa-times close-icon"></i>
+        </div>
+        <ul class="sidebar-list">
+            <li><a href="../../index.html">Spion Army</a></li>
+            <li><a href="../../froggpt/index.html">Portföy</a></li>
+            <li><a href="../../purplestore/index.html">Medya Store</a></li>
+            <li><a href="../../about/product/index.html">Medya Ürünleri</a></li>
+        </ul>
+    </div>
+
+    <!-- Music Button -->
+    <div class="music-button">
+        <button onclick="toggleMusic()" id="music-btn">
+            <i class="fa-solid fa-play"></i>
+        </button>
+        <audio id="background-music" loop>
+            <source src="../../items/music/fon.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <!-- HERO -->
+    <header class="legal-hero">
+        <span class="pill"><i class="fa-solid fa-cookie-bite"></i> Çerez Politikası</span>
+        <h1>Çerez (Cookie) Politikası</h1>
+        <p>Bu politika, spionarmy.com.tr alan adı ve ilişkili tüm sayfalarda kullanılan çerezler hakkında bilgi verir.
+        </p>
+        <p class="updated">Son güncelleme: 2025-01-15</p>
+    </header>
+
+    <main class="legal-wrap">
+        <!-- TOC -->
+        <aside class="toc" aria-label="İçindekiler">
+            <h3>İçindekiler</h3>
+            <a href="#nedir">1) Çerez Nedir?</a>
+            <a href="#neden-kullaniriz">2) Neden Çerez Kullanırız?</a>
+            <a href="#turler">3) Çerez Türleri</a>
+            <a href="#kullandiklarimiz">4) Kullandığımız Çerezler</a>
+            <a href="#yonetim">5) Çerez Tercihlerinizi Yönetme</a>
+            <a href="#saklama">6) Saklama Süreleri</a>
+            <a href="#ucuncu-taraf">7) Üçüncü Taraflar</a>
+            <a href="#degisiklikler">8) Değişiklikler</a>
+            <a href="#iletisim">9) İletişim</a>
+            <span class="small">Bkz: <a href="../GP/index.html">Gizlilik Politikası</a> · <a
+                    href="../KK/index.html">Kullanım Koşulları</a></span>
+        </aside>
+
+        <!-- CONTENT -->
+        <section>
+            <article id="nedir" class="card">
+                <h2>1) Çerez Nedir?</h2>
+                <p>Çerez; ziyaret ettiğiniz web sitesi tarafından tarayıcınıza/bilgisayarınıza kaydedilen küçük metin
+                    dosyasıdır. Çerezler cihazınızı tanımaya, oturumunuzu sürdürmeye ve bazı tercihlerinizi hatırlamaya
+                    yarar.</p>
+            </article>
+
+            <article id="neden-kullaniriz" class="card">
+                <h2>2) Neden Çerez Kullanırız?</h2>
+                <ul class="list">
+                    <li>Site işlevlerini sağlamak ve güvenliği korumak,</li>
+                    <li>Performansı ölçmek ve deneyimi iyileştirmek,</li>
+                    <li>İçerik etkileşimini ve kampanya verimliliğini analiz etmek,</li>
+                    <li>Gerekirse gömülü üçüncü taraf servislerini (ör. video oynatıcı) çalıştırmak.</li>
+                </ul>
+                <p class="note"><strong>Not:</strong> Zorunlu çerezler olmadan sitenin bazı bölümleri çalışmayabilir.
+                </p>
+            </article>
+
+            <article id="turler" class="card">
+                <h2>3) Çerez Türleri</h2>
+
+                <details>
+                    <summary>Zorunlu (Oturum / Güvenlik)</summary>
+                    <p>Site güvenliği, oturum bütünlüğü ve formların doğru çalışması için gereklidir. Onaysız devre dışı
+                        bırakılamaz.</p>
+                </details>
+
+                <details>
+                    <summary>Performans & Analitik</summary>
+                    <p>Ziyaretçi sayısı, gezinme akışı, hatalar ve yükleme süreleri gibi metrikleri ölçer.</p>
+                </details>
+
+                <details>
+                    <summary>İşlevsel</summary>
+                    <p>Tercihlerinizi (dil, oynatma ayarı vb.) hatırlar ve deneyimi kişiselleştirir.</p>
+                </details>
+
+                <details>
+                    <summary>Pazarlama / Üçüncü Taraf</summary>
+                    <p>Gömülü medya (ör. YouTube), sosyal eklentiler veya kampanya etiketleri tarafından
+                        yerleştirilebilir.</p>
+                </details>
+            </article>
+
+            <article id="kullandiklarimiz" class="card">
+                <h2>4) Kullandığımız Çerezler</h2>
+                <p>Aşağıdaki tablo, tipik kurulumlarımızı örnekler. Projeye ve sayfa içeriğine göre değişiklik
+                    gösterebilir.</p>
+                <table aria-label="Çerez listesi">
+                    <thead>
+                        <tr>
+                            <th>Ad</th>
+                            <th>Sağlayıcı</th>
+                            <th>Tür</th>
+                            <th>Amaç</th>
+                            <th>Saklama</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>sa_session</td>
+                            <td>Spion Army</td>
+                            <td>Zorunlu / Birinci Taraf</td>
+                            <td>Oturumu sürdürme, formların korunması, CSRF önlemleri.</td>
+                            <td>Oturum süresi</td>
+                        </tr>
+                        <tr>
+                            <td>consent_state</td>
+                            <td>Spion Army</td>
+                            <td>İşlevsel</td>
+                            <td>Çerez tercih bandında verdiğiniz onayı hatırlama.</td>
+                            <td>12 ay</td>
+                        </tr>
+                        <tr>
+                            <td>_ga, _gid (opsiyonel)</td>
+                            <td>Google Analytics</td>
+                            <td>Performans / Üçüncü Taraf</td>
+                            <td>Toplu ziyaretçi istatistikleri (IP’ler anonimleştirilmiş olabilir).</td>
+                            <td>24 ay / 24 saat</td>
+                        </tr>
+                        <tr>
+                            <td>YSC, VISITOR_INFO1_LIVE (opsiyonel)</td>
+                            <td>YouTube</td>
+                            <td>Medya / Üçüncü Taraf</td>
+                            <td>Gömülü videoların çalışması ve kalite ayarlarının hatırlanması.</td>
+                            <td>Oturum / 6–8 ay</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="note">“Opsiyonel” işaretli çerezler yalnızca açık rıza verdiğinizde çalışır.</p>
+            </article>
+
+            <article id="yonetim" class="card">
+                <h2>5) Çerez Tercihlerinizi Yönetme</h2>
+                <p>Tarayıcınız üzerinden çerezleri silebilir, engelleyebilir veya sınırlayabilirsiniz. Bazı işlevlerin
+                    kısıtlanabileceğini unutmayın.</p>
+                <ul class="list">
+                    <li><strong>Tarayıcı ayarları:</strong> <em>Ayarlar &gt; Gizlilik ve Güvenlik &gt; Çerezler</em>
+                        menüsünden yönetebilirsiniz.</li>
+                    <li><strong>Üçüncü taraf kontrolleri:</strong> Google, YouTube vb. sağlayıcıların
+                        <em>gizlilik/tercih</em> sayfalarını ziyaret edebilirsiniz.</li>
+                </ul>
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px">
+                    <a class="btn" href="#" onclick="reopenConsent();return false;"><i class="fa-solid fa-sliders"></i>
+                        Çerez Tercihlerim</a>
+                    <a class="btn btn--ghost" href="../GP/index.html"><i class="fa-solid fa-shield-halved"></i> Gizlilik
+                        Politikası</a>
+                </div>
+                <script>
+                    // Sayfanızda bir çerez banner’ı/consent modal’ı varsa buradan tekrar açabilirsiniz.
+                    function reopenConsent() {
+                        const ev = new Event('openConsentPanel');
+                        window.dispatchEvent(ev);
+                        alert('Çerez tercih paneli (varsa) açılacaktır.');
+                    }
+                </script>
+            </article>
+
+            <article id="saklama" class="card">
+                <h2>6) Saklama Süreleri</h2>
+                <p>Zorunlu çerezler oturum sonuna kadar; tercih ve analitik çerezler sağlayıcının politikalarına uygun
+                    süre boyunca saklanır (genellikle 6–24 ay). Tarayıcı ayarlarınızdan dilediğiniz an silebilirsiniz.
+                </p>
+            </article>
+
+            <article id="ucuncu-taraf" class="card">
+                <h2>7) Üçüncü Taraflar</h2>
+                <p>Gömülü içerik veya analitik ölçüm araçları, üçüncü taraf sağlayıcılar tarafından çerez
+                    yerleştirebilir. Bu sağlayıcıların çerez politikaları kendi sitelerinde yayımlanır ve onlardan
+                    bağımsızdır.</p>
+            </article>
+
+            <article id="degisiklikler" class="card">
+                <h2>8) Değişiklikler</h2>
+                <p>Bu politika zaman zaman güncellenebilir. Güncel sürüm her zaman bu sayfada yayımlanır. Önemli
+                    değişikliklerde makul bildirim yolları kullanılabilir.</p>
+            </article>
+
+            <article id="iletisim" class="card">
+                <h2>9) İletişim</h2>
+                <p>Çerezlere ilişkin soru ve talepler için: <a
+                        href="mailto:info@spionarmy.com.tr">info@spionarmy.com.tr</a></p>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <ul>
+                    <h1 class="footer-column-header">Medya Operasyonları</h1>
+                    <li><a href="../../investor/index.html">İşbirlikleri</a></li>
+                    <li><a href="../../sponsor/index.html">Sponsorlar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <ul>
+                    <h1 class="footer-column-header">Hizmetler</h1>
+                    <li><a href="../../froggpt/index.html">Portföy</a></li>
+                    <li><a href="../../purplestore/index.html">Medya Store</a></li>
+                    <li><a href="../../contact/index.html">İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <ul>
+                    <h1 class="footer-column-header">Spion Army</h1>
+                    <li><a href="../../about/vision/index.html">Vizyon & Misyon</a></li>
+                    <li><a href="../../about/history/index.html">Şirketin Tarihçesi</a></li>
+                    <li><a href="../../about/product/index.html">Ürünler ve Hizmetler</a></li>
+                    <li><a href="../../about/team/index.html">Ekip ve Liderlik</a></li>
+                    <li><a href="../../about/goal/index.html">Başarılar ve Gelecek Hedefleri</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <ul>
+                    <h1 class="footer-column-header">Yasal Şartlar</h1>
+                    <li><a href="../GP/index.html">Gizlilik Politikası</a></li>
+                    <li><a href="../KK/index.html">Kullanım Koşulları</a></li>
+                    <li><a href="../CP/index.html">Çerez Politikası</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <ul>
+                    <h1 class="footer-column-header">Şirket</h1>
+                    <li><a href="../../career/index.html">Kariyer</a></li>
+                </ul>
+            </div>
+
+            <div class="social-media">
+                <a href="https://www.instagram.com/spionarmy/?next=%2F" title="Instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/spionarmy?trk=public_profile_topcard-current-company"
+                    title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@spionarmy" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://medium.com/@spionarmy" title="Medium"><i class="fa-brands fa-medium"></i></a>
+            </div>
+        </div>
+
+        <div class="last-fot">
+            <div class="slect-lang">
+                <div class="lang-item">
+                    <h4 class="select-lang-text">English</h4>
+                    <a href="https://spionarmy.com"><i class="fa-solid fa-language"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Spion Army. Tüm hakları saklıdır.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

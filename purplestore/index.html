@@ -1,44 +1,500 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-    <title>Purplestore</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Temel Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Spion Army Store — Kamera & Aksiyon Ekipmanları, Tripod, GoPro Aksesuarları</title>
+    <meta name="description"
+        content="Spion Army Store: Kamera tripodları, aksiyon kamerası aksesuarları, kafa bandı, göğüs askısı, gimbal, LED ışık, mikrofon ve daha fazlası. Satın almak için Shopier mağazamıza yönlendirilirsiniz." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://www.spionarmy.com.tr/purplestore/" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Spion Army Store" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:title" content="Spion Army Store — Kamera & Aksiyon Ekipmanları" />
+    <meta property="og:description"
+        content="Tripod, gimbal, aksiyon kamera aksesuarları, ışık, mikrofon ve daha fazlası." />
+    <meta property="og:url" content="https://www.spionarmy.com.tr/purplestore/" />
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0b0f18" />
+
+    <!-- Structured Data: ItemList + Productlar -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Spion Army Store",
+    "itemListElement": [
+      { "@type": "Product", "name": "Aksiyon Kamerası 4K", "url": "https://www.shopier.com/millionerestore" },
+      { "@type": "Product", "name": "Alüminyum Tripod 160cm", "url": "https://www.shopier.com/millionerestore" },
+      { "@type": "Product", "name": "GoPro Göğüs Askısı (Chest Mount)", "url": "https://www.shopier.com/millionerestore" },
+      { "@type": "Product", "name": "Kafa Bandı (Head Strap)", "url": "https://www.shopier.com/millionerestore" },
+      { "@type": "Product", "name": "Telefon Gimbal 3-Eksen", "url": "https://www.shopier.com/millionerestore" },
+      { "@type": "Product", "name": "LED Işık Paneli (Bicolor)", "url": "https://www.shopier.com/millionerestore" },
+      { "@type": "Product", "name": "Yaka Mikrofon Seti", "url": "https://www.shopier.com/millionerestore" },
+      { "@type": "Product", "name": "Action Cam Aksesuar Kiti (19 Parça)", "url": "https://www.shopier.com/millionerestore" },
+      { "@type": "Product", "name": "Mini Masaüstü Tripod", "url": "https://www.shopier.com/millionerestore" },
+      { "@type": "Product", "name": "Yeşil Perde (150×200)", "url": "https://www.shopier.com/millionerestore" }
+    ]
+  }
+  </script>
+
+    <!-- Font & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Proje stil dosyanız -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="../images/logos/favicon.png" type="image/x-icon" />
+
+    <!-- MAĞAZA ÖZEL STİLLER (NAVBAR/FOOTER’A DOKUNMAZ) -->
+    <style>
+        :root {
+            --store-bg: #0b0f18;
+            --store-card: #101725;
+            --store-ink: #e9eef9;
+            --store-muted: #9db0cc;
+            --store-brand: #7c5cff;
+            --store-brand-2: #5ad1ff;
+            --store-stroke: #1b2540;
+        }
+
+        /* Tüm mağaza stillerini .store içine scope ettik */
+        .store {
+            background: var(--store-bg);
+            color: var(--store-ink);
+            font-family: Rubik, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .store .store-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 42px 18px 28px;
+            background: radial-gradient(1200px 500px at 20% -10%, #19243d 0%, transparent 60%),
+                radial-gradient(800px 400px at 100% 0%, #1a2a4a 0%, transparent 55%);
+            border-bottom: 1px solid #14203a;
+        }
+
+        .store .container {
+            max-width: 1200px;
+            margin: 0 auto
+        }
+
+        .store .hero-title {
+            font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+            margin: 0 0 8px
+        }
+
+        .store .hero-lead {
+            color: var(--store-muted);
+            max-width: 70ch;
+            margin: 0
+        }
+
+        .store .filters {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 10px;
+            margin-top: 18px
+        }
+
+        @media (max-width:900px) {
+            .store .filters {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .store .filters .search {
+                grid-column: 1/-1
+            }
+        }
+
+        .store .field {
+            position: relative
+        }
+
+        .store .field input,
+        .store .field select {
+            width: 100%;
+            border: 1px solid var(--store-stroke);
+            background: rgba(16, 23, 37, .7);
+            color: var(--store-ink);
+            padding: 12px 12px;
+            border-radius: 12px;
+            outline: none;
+        }
+
+        .store .grid {
+            padding: 18px;
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .store .card {
+            background: linear-gradient(180deg, #11182a, #0f1523);
+            border: 1px solid var(--store-stroke);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .store .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, .45);
+        }
+
+        .store .thumb {
+            position: relative;
+            aspect-ratio: 4/3;
+            background: #0a1222
+        }
+
+        .store .thumb img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .98
+        }
+
+        .store .badge {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            background: linear-gradient(90deg, var(--store-brand), var(--store-brand-2));
+            color: #fff;
+            font-size: .72rem;
+            font-weight: 800;
+            letter-spacing: .04em;
+            border-radius: 999px;
+            padding: 6px 10px;
+        }
+
+        .store .body {
+            padding: 14px 14px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px
+        }
+
+        .store .kicker {
+            font-size: .84rem;
+            color: var(--store-muted)
+        }
+
+        .store .title {
+            margin: 0;
+            font-size: 1.08rem
+        }
+
+        .store .price {
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .store .price .p {
+            font-weight: 800
+        }
+
+        .store .price .old {
+            color: #8aa0c5;
+            text-decoration: line-through;
+            font-size: .9rem
+        }
+
+        .store .actions {
+            margin-top: auto;
+            display: flex;
+            gap: 8px
+        }
+
+        .store .btn {
+            flex: 1;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            border: 1px solid var(--store-stroke);
+            background: #121a2d;
+            color: #e9eef9;
+            text-decoration: none;
+            padding: 11px 12px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        .store .btn:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+            transform: translateY(-1px)
+        }
+
+        .store .btn.primary {
+            background: linear-gradient(90deg, var(--store-brand), var(--store-brand-2));
+            border-color: transparent;
+            color: #fff
+        }
+
+        .store .tagline {
+            padding: 0 18px 26px;
+            color: var(--store-muted);
+            text-align: center
+        }
+    </style>
 </head>
+
 <body>
+    <!-- NAV (DEĞİŞMEDİ) -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="../images/logos/square.png" alt="Spion Army" />
+            <h1 class="logo-text">Spion Army</h1>
+        </div>
+        <div class="navbar-list">
+            <ul class="list-item">
+                <li><a href="../index.html">Spion Army</a></li>
+                <li><a href="../froggpt/index.html">Portföy</a></li>
+                <li><a href="./index.html">Medya Store</a></li>
+                <li class="hide-item"><a href="../contact/index.html">İletişim</a></li>
+                <li class="respo"><a href="#">Daha Fazla<i class="fa-solid fa-chevron-down"></i></a></li>
+            </ul>
+        </div>
+        <div class="last-nav">
+            <h1 class="user-text"><a href="../career/index.html">Bize Katıl</a></h1>
+            <a href="../career/index.html"><i class="fa-solid fa-plus"></i></a>
+        </div>
+    </nav>
 
-    
-    <div class="custom-cursor"></div>
-    
-  <div class="title">  <span><span style="color: rgb(197, 159, 233);">PURPLEFROG TECHNOLOGY</span> DEVASA OYNUYOR</span></div>
-  <div class="holder">
-    <div class="cylinder">
-        <div class="face" style="--index: 0;">YAKINDA</div>
-        <div class="face" style="--index: 1;">YAKINDA</div>
-        <div class="face" style="--index: 2;">YAKINDA</div>
-        <div class="face" style="--index: 3;">YAKINDA</div>
-        <div class="face" style="--index: 4;">YAKINDA</div>
-        <div class="face" style="--index: 5;">YAKINDA</div>
-        <div class="face" style="--index: 6;">YAKINDA</div>
-        <div class="face" style="--index: 7;">YAKINDA</div>
-        <div class="face" style="--index: 8;">YAKINDA</div>
-        <div class="face" style="--index: 9;">YAKINDA</div>
-        <div class="face" style="--index: 10;">YAKINDA</div>
-        <div class="face" style="--index: 11;">YAKINDA</div>
-        <div class="face" style="--index: 12;">YAKINDA</div>
-        <div class="face" style="--index: 13;">YAKINDA</div>
-        <div class="face" style="--index: 14;">YAKINDA</div>
-        <div class="face" style="--index: 15;">YAKINDA</div>
-        <div class="face" style="--index: 16;">YAKINDA</div>
-        <div class="face" style="--index: 17;">YAKINDA</div>
-        <div class="face" style="--index: 18;">YAKINDA</div>
-        <div class="face" style="--index: 19;">YAKINDA</div>
+    <div class="hidebar-list">
+        <ul class="h-list-item">
+            <li><a href="../contact/index.html">İletişim</a></li>
+        </ul>
     </div>
-</div>
+
+    <div class="sidebar">
+        <div class="hide-btn">
+            <i class="fa-solid fa-bars open-icon"></i>
+            <i class="fa-solid fa-times close-icon"></i>
+        </div>
+        <ul class="sidebar-list">
+            <li><a href="../index.html">Spion Army</a></li>
+            <li><a href="../froggpt/index.html">Portföy</a></li>
+            <li><a href="./index.html">Medya Store</a></li>
+            <li><a href="../about/product/index.html">Medya Ürünleri</a></li>
+        </ul>
+    </div>
+
+    <!-- STORE (Scoped alan) -->
+    <div class="store">
+        <!-- HERO -->
+        <header class="store-hero">
+            <div class="container">
+                <h2 class="hero-title">Spion Army Store</h2>
+                <p class="hero-lead">Prodüksiyon & içerik üretimi için seçilmiş ekipmanlar. Güvenli alışveriş için
+                    ürünlere tıkladığınızda <strong>Shopier</strong> mağazamız açılır.</p>
+
+                <!-- Filtreler -->
+                <div class="filters">
+                    <div class="field search">
+                        <input id="search" type="search" placeholder="Ürün ara: tripod, mikrofon, gimbal..."
+                            aria-label="Mağazada ara" />
+                    </div>
+                    <div class="field">
+                        <select id="category" aria-label="Kategori filtrele">
+                            <option value="">Tüm Kategoriler</option>
+                            <option value="kamera">Kamera & Aksiyon</option>
+                            <option value="tripod">Tripod & Destek</option>
+                            <option value="ses">Ses & Mikrofon</option>
+                            <option value="ışık">Işık</option>
+                            <option value="aksesuar">Aksesuar</option>
+                            <option value="stüdyo">Stüdyo</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <select id="sort" aria-label="Sırala">
+                            <option value="">Sırala</option>
+                            <option value="price-asc">Fiyat (Artan)</option>
+                            <option value="price-desc">Fiyat (Azalan)</option>
+                            <option value="name-asc">Ada göre (A→Z)</option>
+                            <option value="name-desc">Ada göre (Z→A)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- GRID -->
+        <main class="container">
+            <section class="grid" id="productGrid" aria-label="Ürün listesi"></section>
+            <p class="tagline">Fiyatlar temsilidir; güncel stok ve fiyat bilgisi için Shopier mağaza sayfasını ziyaret
+                edin.</p>
+        </main>
+    </div>
+
+    <!-- FOOTER (DEĞİŞMEDİ) -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <ul>
+                    <h1 class="footer-column-header">Medya Operasyonları</h1>
+                    <li><a href="../investor/index.html">İşbirlikleri</a></li>
+                    <li><a href="../sponsor/index.html">Sponsorlar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <ul>
+                    <h1 class="footer-column-header">Hizmetler</h1>
+                    <li><a href="../froggpt/index.html">Portföy</a></li>
+                    <li><a href="./index.html">Medya Store</a></li>
+                    <li><a href="../about/product/index.html">İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <ul>
+                    <h1 class="footer-column-header">Spion Army</h1>
+                    <li><a href="../about/vision/index.html">Vizyon & Misyon</a></li>
+                    <li><a href="../about/history/index.html">Şirketin Tarihçesi</a></li>
+                    <li><a href="../about/product/index.html">Ürünler ve Hizmetler</a></li>
+                    <li><a href="../about/team/index.html">Ekip ve Liderlik</a></li>
+                    <li><a href="../about/goal/index.html">Başarılar ve Gelecek Hedefleri</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <ul>
+                    <h1 class="footer-column-header">Yasal Şartlar</h1>
+                    <li><a href="../legal/GP/index.html">Gizlilik Politikası</a></li>
+                    <li><a href="../legal/KK/index.html">Kullanım Koşulları</a></li>
+                    <li><a href="../legal/CP/index.html">Çerez Politikası</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <ul>
+                    <h1 class="footer-column-header">Şirket</h1>
+                    <li><a href="../career/index.html">Kariyer</a></li>
+                </ul>
+            </div>
+
+            <div class="social-media">
+                <a href="https://www.instagram.com/spionarmy/?next=%2F" title="Instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/spionarmy?trk=public_profile_topcard-current-company"
+                    title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@spionarmy" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://medium.com/@spionarmy" title="Medium"><i class="fa-brands fa-medium"></i></a>
+            </div>
+        </div>
+
+        <div class="last-fot">
+            <div class="slect-lang">
+                <div class="lang-item">
+                    <h4 class="select-lang-text">English</h4>
+                    <!-- dil değişimi: ana site -->
+                    <a href="https://spionarmy.com"><i class="fa-solid fa-language"></i></a>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 Spion Army. Tüm hakları saklıdır.
+            </div>
+        </div>
+    </footer>
+
+    <!-- MAĞAZA JS -->
+    <script>
+        const SHOPIER = "https://www.shopier.com/millionerestore";
+        const PRODUCTS = [
+            { id: "cam4k", name: "Aksiyon Kamerası 4K", cat: "kamera", price: 3299, old: 3799, img: "../images/item/1.png", badge: "Yeni" },
+            { id: "tripod160", name: "Alüminyum Tripod 160cm", cat: "tripod", price: 1199, old: 1399, img: "../images/item/2.png", badge: "Popüler" },
+            { id: "gimbal3", name: "Telefon Gimbal 3-Eksen", cat: "kamera", price: 2199, old: 2499, img: "../images/item/3.png", badge: "Stabil" },
+            { id: "led-bicolor", name: "LED Işık Paneli (Bicolor)", cat: "ışık", price: 899, old: 1099, img: "../images/item/4.png", badge: "Stüdyo" },
+            { id: "mini-tripod", name: "Mini Masaüstü Tripod", cat: "tripod", price: 179, old: 229, img: "../images/item/5.png", badge: "Kompakt" },
+            { id: "greenscreen", name: "Yeşil Perde (150×200)", cat: "stüdyo", price: 599, old: 749, img: "../images/item/6.png", badge: "Stüdyo" }
+        ];
 
 
- <script src="./code.js"></script>
+        const grid = document.getElementById('productGrid');
+        function toTRY(n) { return n.toLocaleString('tr-TR') + " ₺"; }
+
+        function cardTemplate(p) {
+            return `
+    <article class="card" data-name="${p.name.toLowerCase()}" data-cat="${p.cat}" data-price="${p.price}">
+      <div class="thumb">
+        <img loading="lazy" src="${p.img}" alt="${p.name}">
+        ${p.badge ? `<span class="badge">${p.badge}</span>` : ``}
+      </div>
+      <div class="body">
+        <span class="kicker">${catLabel(p.cat)}</span>
+        <h3 class="title">${p.name}</h3>
+        <div class="price">
+          <span class="p">${toTRY(p.price)}</span>
+          ${p.old ? `<span class="old">${toTRY(p.old)}</span>` : ``}
+        </div>
+        <div class="actions">
+          <a class="btn" href="${SHOPIER}" target="_blank" rel="noopener">Detay</a>
+          <a class="btn primary" href="${SHOPIER}" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> Mağazaya Git</a>
+        </div>
+      </div>
+    </article>`;
+        }
+        function catLabel(k) {
+            return ({
+                "kamera": "Kamera & Aksiyon",
+                "tripod": "Tripod & Destek",
+                "ses": "Ses & Mikrofon",
+                "ışık": "Işık",
+                "aksesuar": "Aksesuar",
+                "stüdyo": "Stüdyo"
+            })[k] || "Ürün";
+        }
+        function render(list) { grid.innerHTML = list.map(cardTemplate).join(''); }
+        render(PRODUCTS);
+
+        // Filtreleme & Sıralama
+        const q = document.getElementById('search');
+        const cat = document.getElementById('category');
+        const sort = document.getElementById('sort');
+
+        function apply() {
+            let list = [...PRODUCTS];
+
+            const term = (q.value || "").trim().toLowerCase();
+            if (term) list = list.filter(p => p.name.toLowerCase().includes(term));
+
+            const c = cat.value;
+            if (c) list = list.filter(p => p.cat === c);
+
+            switch (sort.value) {
+                case "price-asc": list.sort((a, b) => a.price - b.price); break;
+                case "price-desc": list.sort((a, b) => b.price - a.price); break;
+                case "name-asc": list.sort((a, b) => a.name.localeCompare(b.name, "tr")); break;
+                case "name-desc": list.sort((a, b) => b.name.localeCompare(a.name, "tr")); break;
+            }
+            render(list);
+        }
+        [q, cat, sort].forEach(el => el.addEventListener('input', apply));
+    </script>
+
+    <!-- Ana JS’in varsa -->
+    <script src="main.js"></script>
 </body>
+
 </html>
