@@ -1,0 +1,189 @@
+# ═══════════════════════════════════════════════════════════
+# SPION MEDIA — PRODUCTION .HTACCESS
+# ═══════════════════════════════════════════════════════════
+
+# ═══ HTTPS YÖNLENDIRMESI ═══
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # HTTPS'e yönlendir
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  
+  # www ekle veya kaldır (tercihine göre birini seç)
+  # www eklemek için:
+  # RewriteCond %{HTTP_HOST} !^www\. [NC]
+  # RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [L,R=301]
+  
+  # www kaldırmak için:
+  # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  # RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+</IfModule>
+
+# ═══ GÜVENLİK HEADERS ═══
+<IfModule mod_headers.c>
+  # XSS Protection
+  Header set X-XSS-Protection "1; mode=block"
+  
+  # Clickjacking koruması
+  Header set X-Frame-Options "SAMEORIGIN"
+  
+  # MIME sniffing koruması
+  Header set X-Content-Type-Options "nosniff"
+  
+  # Referrer Policy
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  
+  # Content Security Policy (CSP)
+  # Not: Google Translate için 'unsafe-inline' gerekli
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' translate.google.com translate.googleapis.com *.googletagmanager.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com translate.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' translate.googleapis.com; frame-src translate.google.com;"
+  
+  # Permissions Policy (eski Feature-Policy)
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ═══ BROWSER CACHING ═══
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Görseller - 1 yıl
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  
+  # CSS ve JavaScript - 1 ay
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+  
+  # Fontlar - 1 yıl
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  
+  # HTML - 1 saat
+  ExpiresByType text/html "access plus 1 hour"
+  
+  # JSON - 1 gün
+  ExpiresByType application/json "access plus 1 day"
+</IfModule>
+
+# ═══ GZIP COMPRESSION ═══
+<IfModule mod_deflate.c>
+  # HTML, CSS, JavaScript sıkıştır
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ═══ DOSYA ERİŞİM KISITLAMALARI ═══
+# Hassas dosyalara erişimi engelle
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql|md)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# JSON dosyalarına doğrudan erişimi engelle
+<FilesMatch "\.json$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# Git dosyalarını gizle
+<DirectoryMatch "\.git">
+  Order Allow,Deny
+  Deny from all
+</DirectoryMatch>
+
+# ═══ ADMIN PANEL KORUMASI ═══
+# Admin panele sadece belirli IP'lerden erişim (opsiyonel)
+# Kullanmak için # işaretlerini kaldırın ve IP'nizi ekleyin
+# <Directory "/admin">
+#   Order Deny,Allow
+#   Deny from all
+#   Allow from 123.456.789.0
+#   Allow from 987.654.321.0
+# </Directory>
+
+# ═══ HATA SAYFALARI ═══
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+ErrorDocument 403 /403.html
+
+# ═══ DIRECTORY LISTING ENGELLE ═══
+Options -Indexes
+
+# ═══ SERVER SIGNATURE GIZLE ═══
+ServerSignature Off
+
+# ═══ PHP GÜVENLİK AYARLARI (PHP kullanıyorsanız) ═══
+<IfModule mod_php7.c>
+  php_flag display_errors Off
+  php_flag log_errors On
+  php_flag expose_php Off
+  php_value upload_max_filesize 10M
+  php_value post_max_size 10M
+  php_value max_execution_time 30
+  php_value max_input_time 30
+</IfModule>
+
+# ═══ HOTLINK KORUMASI (Görsellerin başka sitelerden kullanılmasını engelle) ═══
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Kendi domain'inizi buraya yazın
+  RewriteCond %{HTTP_REFERER} !^$
+  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?yoursite\.com [NC]
+  RewriteRule \.(jpg|jpeg|png|gif|webp|svg)$ - [F,L]
+</IfModule>
+
+# ═══ UTF-8 ENCODING ═══
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .css .js .xml .json .rss .atom
+
+# ═══ MIME TYPES ═══
+<IfModule mod_mime.c>
+  # Web Fonts
+  AddType font/ttf .ttf
+  AddType font/otf .otf
+  AddType font/woff .woff
+  AddType font/woff2 .woff2
+  AddType application/font-woff .woff
+  
+  # Images
+  AddType image/webp .webp
+  AddType image/svg+xml .svg .svgz
+  
+  # JavaScript
+  AddType application/javascript .js
+  AddType application/json .json
+  
+  # Video
+  AddType video/mp4 .mp4
+  AddType video/webm .webm
+</IfModule>
+
+# ═══ ETags KALDIR (Performans için) ═══
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
+
+# ═══ CORS (Gerekirse aktif edin) ═══
+# <IfModule mod_headers.c>
+#   Header set Access-Control-Allow-Origin "*"
+#   Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+#   Header set Access-Control-Allow-Headers "Content-Type"
+# </IfModule>
+

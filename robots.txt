@@ -1,0 +1,57 @@
+# ═══════════════════════════════════════════════════════════
+# SPION MEDIA — ROBOTS.TXT
+# ═══════════════════════════════════════════════════════════
+
+# Tüm botlara izin ver
+User-agent: *
+
+# İzin verilen alanlar
+Allow: /
+Allow: /images/
+Allow: /blog/
+Allow: /products.html
+Allow: /portfolio.html
+Allow: /references/
+Allow: /about/
+Allow: /contact/
+Allow: /pricing/
+Allow: /career/
+Allow: /faq/
+Allow: /legal/
+Allow: /purplestore/
+Allow: /froggpt/
+
+# Yasaklanan alanlar
+Disallow: /admin/
+Disallow: /data/
+Disallow: /*.json$
+Disallow: /items/
+Disallow: /.git/
+Disallow: /.vscode/
+
+# Sitemap
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Özel bot ayarları
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Kötü botları engelle
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Crawl rate (Google için)
+# Crawl-delay: 10
+

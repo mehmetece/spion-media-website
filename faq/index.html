@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SSS — Spion Media | Sik Sorulan Sorular</title>
+<meta name="description" content="Spion Media hakkinda merak ettiginiz her sey: surec, fiyat, teknik detaylar ve guven. 12 soru, 12 net cevap."/>
+<link rel="canonical" href="https://media.spionarmy.com/faq/"/>
+<link rel="icon" href="../images/logos/favicon.png"/>
+<link rel="stylesheet" href="../spion.css"/>
+<style>
+.faq-cats{display:flex;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-12);}
+.faq-cat-chip{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:8px 16px;border-radius:var(--radius-sharp);border:1px solid var(--color-border);color:var(--color-text-secondary);transition:all var(--transition-base);}
+.faq-cat-chip:hover{border-color:var(--color-accent);color:var(--color-accent);}
+.faq-section{margin-bottom:var(--space-16);}
+.faq-section__header{display:flex;align-items:center;gap:var(--space-4);margin-bottom:var(--space-8);}
+.faq-section__num{font-family:var(--font-heading);font-size:3rem;color:var(--color-accent);opacity:0.15;line-height:1;}
+.faq-section__label{font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-1);}
+.faq-section__title{font-family:var(--font-heading);font-size:1.8rem;color:var(--color-text-primary);}
+.faq-list{display:flex;flex-direction:column;gap:var(--space-2);}
+.faq-item{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-sharp);overflow:hidden;transition:border-color var(--transition-base);}
+.faq-item[open]{border-color:var(--color-accent);}
+.faq-item summary{display:flex;align-items:center;gap:var(--space-4);padding:var(--space-6) var(--space-8);cursor:pointer;list-style:none;user-select:none;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item__num{font-family:var(--font-heading);font-size:1rem;color:var(--color-accent);opacity:0.4;flex-shrink:0;min-width:28px;}
+.faq-item__q{font-size:0.9rem;font-weight:600;color:var(--color-text-primary);flex:1;line-height:1.4;}
+.faq-item__arrow{color:var(--color-text-muted);flex-shrink:0;transition:transform var(--transition-base);}
+.faq-item[open] .faq-item__arrow{transform:rotate(180deg);}
+.faq-item__answer{padding:0 var(--space-8) var(--space-6) calc(var(--space-8) + 28px + var(--space-4));font-size:0.85rem;color:var(--color-text-secondary);line-height:1.75;border-top:1px solid var(--color-border);}
+.faq-item__answer p{margin-top:var(--space-4);}
+.faq-cta{background:linear-gradient(135deg,var(--color-surface) 0%,rgba(200,169,110,0.06) 100%);border:1px solid var(--color-accent);border-radius:var(--radius-sharp);padding:var(--space-12);text-align:center;margin-top:var(--space-16);}
+.faq-cta__title{font-family:var(--font-heading);font-size:clamp(1.8rem,4vw,3rem);color:var(--color-text-primary);margin-bottom:var(--space-4);}
+.faq-cta__sub{font-size:0.9rem;color:var(--color-text-secondary);margin-bottom:var(--space-8);}
+.faq-cta__actions{display:flex;align-items:center;justify-content:center;gap:var(--space-4);flex-wrap:wrap;}
+</style>
+</head>
+<body>
+<nav class="navbar" role="navigation" aria-label="Ana navigasyon"><div class="navbar__inner"><a href="../index.html" class="navbar__logo">SPION<span>MEDIA</span></a><div class="navbar__menu"><a href="../index.html" class="navbar__link">Ana Sayfa</a><a href="../products.html" class="navbar__link">HİZMETLER</a><a href="../portfolio.html" class="navbar__link">Portfolyo</a><div class="navbar__dropdown"><button class="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">hakkımızda <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><div class="navbar__dropdown-menu" role="menu"><a href="../about/vision/index.html" class="navbar__dropdown-item">Vizyon</a><a href="../about/history/index.html" class="navbar__dropdown-item">tarihçe</a><a href="../about/team/index.html" class="navbar__dropdown-item">Ekip</a><a href="../about/goal/index.html" class="navbar__dropdown-item">Hedefler</a></div></div><a href="../purplestore/index.html" class="navbar__link">MEDYA Store</a><a href="../Blog/index.html" class="navbar__link">Blog</a><a href="../contact/index.html" class="navbar__link">iletişim</a></div><div class="navbar__actions"><button class="navbar__lang" data-lang-toggle aria-label="Dili değiştir" aria-pressed="false"><span data-lang-label>EN</span></button><a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Teklif Al</a></div><button class="navbar__hamburger" aria-label="menüyü ac" aria-expanded="false"><span></span><span></span><span></span></button></div></nav><div class="navbar__mobile-overlay" role="dialog" aria-label="Mobil menu"><a href="../index.html" class="navbar__mobile-link">Ana Sayfa</a><a href="../products.html" class="navbar__mobile-link">HİZMETLER</a><a href="../portfolio.html" class="navbar__mobile-link">Portfolyo</a><a href="../about/team/index.html" class="navbar__mobile-sub">Ekip</a><a href="../purplestore/index.html" class="navbar__mobile-link">MEDYA Store</a><a href="../contact/index.html" class="navbar__mobile-link">iletişim</a><a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary navbar__mobile-cta">Teklif Al</a></div>
+<div class="page-hero section--dark">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Ana Sayfa</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <span class="breadcrumb__current">SSS</span>
+    </nav>
+    <p class="section-label page-hero__label">Istihbarat Dosyasi</p>
+    <h1 class="page-hero__title">AKLINIZDAKI SORULARIN CEVAPLARI BURADA.</h1>
+    <p class="page-hero__sub">Belirsizlik zaman kaybettirir. Surec, fiyat, teknik ve guven — dort kategoride 12 soru, 12 net cevap.</p>
+  </div>
+</div>
+
+<main>
+<section class="section">
+  <div class="container">
+
+    <div class="faq-cats reveal">
+      <a href="#surec" class="faq-cat-chip">Surec</a>
+      <a href="#fiyat" class="faq-cat-chip">Fiyat</a>
+      <a href="#teknik" class="faq-cat-chip">Teknik</a>
+      <a href="#guven" class="faq-cat-chip">Guven</a>
+    </div>
+
+    <!-- SUREC -->
+    <div class="faq-section reveal" id="surec">
+      <div class="faq-section__header">
+        <div class="faq-section__num" aria-hidden="true">01</div>
+        <div>
+          <div class="faq-section__label">Kategori 01</div>
+          <h2 class="faq-section__title">Surec</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">01</span>
+            <span class="faq-item__q">nasıl basliyoruz? Ilk adim ne?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Telegram veya e-posta uzerinden kisa bir mesaj yeterli — ne yapmak istediginizi, hangi platform için olduğunu ve varsa butce araliginizi paylasin. BİZ 48 saat icinde geri doner, brief toplantisi için zaman ayarlariz. Toplanti 30-45 dakika surer; sonrasinda size yazili bir teklif iletilir.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">02</span>
+            <span class="faq-item__q">Brief nasıl aliniyor? Hazirlikli gelmem gerekiyor mu?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Hazirlikli gelmenize gerek yok — brief toplantisinda BİZ sorariz, siz cevaplarsiniz. Hedef kitle, ton, begendginiz ornekler, kullanım amaci ve teslimat tarihi gibi konulari birlikte netlestiririz. Toplanti sonrasinda brief dokumani BİZ yazarız ve onayiniza sunariz.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">03</span>
+            <span class="faq-item__q">Revizyon hakkım var Mi? Kac kez degisiklik isteyebilirim?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Standart paketlerde 2 revizyon hakki taninir. Revizyon, onaylanan brief cercevesinde yapilan degisiklikler için gecerlidir; brief disina cikan koklu yon degisiklikleri ek ucrete tabidir. Revizyonlari net ve toplu iletmenizi oneririz.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- FIYAT -->
+    <div class="faq-section reveal" id="fiyat">
+      <div class="faq-section__header">
+        <div class="faq-section__num" aria-hidden="true">02</div>
+        <div>
+          <div class="faq-section__label">Kategori 02</div>
+          <h2 class="faq-section__title">Fiyat</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">04</span>
+            <span class="faq-item__q">Odeme nasıl yapiliyor? Pesin Mi odemem gerekiyor?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Tek seferlik projelerde %50 avans, teslimat oncesi kalan %50 seklinde calisiyoruz. Aylik retainer paketlerde odeme her ayin basinda alinir. Banka havalesi veya EFT kabul ediyoruz.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">05</span>
+            <span class="faq-item__q">Fatura kesiyor musunuz? KDV dahil Mi?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Evet, tüm odemeler için e-fatura veya e-arsiv fatura duzenliyoruz. Paylasilan fiyatlar KDV harictir; faturaya yasal oranda KDV eklenir. kurumsal musteriler için gerekli tüm belgeleri sagliyoruz.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">06</span>
+            <span class="faq-item__q">Fiyat teklifini aldiktan sonra degisiyor mu?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Onaylanan teklif sabittir — proje kapsami degismedigi surece fiyat degismez. Kapsam genislesirse (ek lokasyon, ek video, ek revizyon vb.) bunu onceden yazili olarak bildiririz ve onayinizi aliriz. Surpriz fatura gondermiyoruz.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- TEKNIK -->
+    <div class="faq-section reveal" id="teknik">
+      <div class="faq-section__header">
+        <div class="faq-section__num" aria-hidden="true">03</div>
+        <div>
+          <div class="faq-section__label">Kategori 03</div>
+          <h2 class="faq-section__title">Teknik</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">07</span>
+            <span class="faq-item__q">Drone çekim için ozel izin gerekiyor mu? Bunu siz Mi halledersiniz?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Turkiye de ticari drone operasyonlari için DHMİ ucus izni ve bazi bolgelerde ek yerel izinler gerekiyor. Bu izinlerin alinmasi bizim sorumlulugumuzdadir — siz sadece lokasyonu ve tarihi bildirin, gerisini BİZ hallederiz. Izin surecleri genellikle 3-5 is gunu alir.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">08</span>
+            <span class="faq-item__q">Videolar hangi formatlarda teslim ediliyor?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Standart teslimat MP4 (H.264, 1080p veya 4K) formatindadir. Talep uzerine Instagram Reels (9:16), YouTube (16:9), LinkedIn ve reklam platformlarina uygun boyutlarda ek versiyonlar hazirlanir. Ham dosyalar (RAW/ProRes) ayrica talep edilebilir; bu ek ucrete tabidir.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">09</span>
+            <span class="faq-item__q">Minimum çekim suresi nedir? Yarim gunluk is aliyor musunuz?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Evet, yarim gunluk (4 saatlik) çekim seansları aliyoruz. Drone cekimler için minimum yarim gun, studyo veya saha produksiyonlari için minimum tam gun (8 saat) baz alinir. Cok kisa icerikler için de ayri paketlerimiz mevcut.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- GUVEN -->
+    <div class="faq-section reveal" id="guven">
+      <div class="faq-section__header">
+        <div class="faq-section__num" aria-hidden="true">04</div>
+        <div>
+          <div class="faq-section__label">Kategori 04</div>
+          <h2 class="faq-section__title">Guven</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">10</span>
+            <span class="faq-item__q">Referans gosterebilir misiniz? Daha once ne tur isler yaptiniz?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Otel, beach club, lojistik ve kurumsal marka projeleri dahil cesitli sektorlerde calismalar yaptik. Portfolyo orneklerimizi brief toplantisinda paylasiyoruz. sosyal MEDYA kanallarimizda yayinlanan calismalar herkese açık.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">11</span>
+            <span class="faq-item__q">Sozlesme yapiyor musunuz? Anlasma nasıl belgeleniyor?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Evet, her proje için yazili hizmet sozlesmesi duzenliyoruz. Sozlesmede kapsam, teslimat tarihleri, revizyon haklari, odeme koşulları ve gizliLİK maddeleri yer alir. Imzali sozlesme ve avans odemesi alinmadan uretime baslamiyoruz.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__num">12</span>
+            <span class="faq-item__q">Uretilen iceriklerin telif haklari kime ait?</span>
+            <svg class="faq-item__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Tam odeme tamamlandiktan sonra uretilen iceriklerin kullanım haklari musteriye devredilir. Spion Media, portfolyo amacli kullanım hakkini sakli tutar — aksi sozlesmede belirtilmedikce.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="faq-cta reveal">
+      <p class="section-label">Aradiginiz Cevabi Bulamadin Mi?</p>
+      <h2 class="faq-cta__title">DOGRUDAN SORUN</h2>
+      <p class="faq-cta__sub">48 saat icinde yanit garantisi veriyoruz.</p>
+      <div class="faq-cta__actions">
+        <a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Telegram'dan Sor &rarr;</a>
+        <a href="../contact/index.html" class="btn btn-ghost btn-lg">E-posta Gonder &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer class="footer" role="contentinfo"><div class="footer__watermark" aria-hidden="true">SPION MEDIA</div><div class="container"><div class="footer__grid"><div><a href="../index.html" class="navbar__logo" style="display:inline-block;margin-bottom:var(--space-4);">SPION<span style="color:var(--color-text-primary)">MEDIA</span></a><p class="footer__brand-desc">sessiz işgal.</p></div><div><h3 class="footer__col-title">HİZMETLER</h3><nav class="footer__col-links"><a href="../products.html">tüm HİZMETLER</a><a href="../products.html#video">Video</a><a href="../products.html#drone">Drone</a><a href="../products.html#ai">AI</a></nav></div><div><h3 class="footer__col-title">şirket</h3><nav class="footer__col-links"><a href="../about/vision/index.html">Vizyon</a><a href="../about/team/index.html">Ekip</a><a href="../career/index.html">Kariyer</a><a href="../Blog/index.html">Blog</a></nav></div><div><h3 class="footer__col-title">Yasal</h3><nav class="footer__col-links"><a href="../legal/GP/index.html">gizliLİK politikası</a><a href="../legal/KK/index.html">kullanım koşulları</a><a href="../legal/CP/index.html">çerez politikası</a></nav></div></div><div class="footer__bottom"><p class="footer__copyright">&copy; 2025 Spion Media. tüm haklari saklidir.</p><div class="footer__email"><a href="mailto:spionmediaglobal@gmail.com">spionmediaglobal@gmail.com</a></div></div></div></footer>
+<script src="../spion-nav.js"></script>
+</body>
+</html>

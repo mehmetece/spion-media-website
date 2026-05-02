@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog — Spion Media | düşünce Liderligi</title>
+<meta name="description" content="algoritma, içerik, AI ve marka stratejisi uzerine — klisesiz, provokasyon iceren, bilgiye dayali yazilar."/>
+<link rel="canonical" href="https://media.spionarmy.com/Blog/"/>
+<link rel="icon" href="../images/logos/favicon.png"/>
+<link rel="stylesheet" href="../spion.css"/>
+<style>
+.Blog-hero{padding:calc(var(--nav-height) + var(--space-16)) 0 var(--space-16);text-align:center;border-bottom:1px solid var(--color-border);}
+.Blog-hero__label{margin-bottom:var(--space-4);}
+.Blog-hero__title{font-family:var(--font-heading);font-size:clamp(2.5rem,6vw,5rem);line-height:1.1;color:var(--color-text-primary);margin-bottom:var(--space-6);max-width:24ch;margin-left:auto;margin-right:auto;}
+.Blog-hero__sub{font-size:1rem;color:var(--color-text-secondary);max-width:56ch;margin:0 auto;}
+.Blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-8);margin-top:var(--space-12);}
+@media(max-width:768px){.Blog-grid{grid-template-columns:1fr;}}
+.Blog-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-sharp);overflow:hidden;transition:border-color var(--transition-base),transform var(--transition-base);display:flex;flex-direction:column;}
+.Blog-card:hover{border-color:var(--color-accent);transform:translateY(-4px);}
+.Blog-card__img{aspect-ratio:16/9;overflow:hidden;background:var(--color-surface-2);display:block;flex-shrink:0;}
+.Blog-card__img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;display:block;}
+.Blog-card:hover .Blog-card__img img{transform:scale(1.04);}
+.Blog-card__body{padding:var(--space-8);flex:1;display:flex;flex-direction:column;}
+.Blog-card__cat{font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-3);display:block !important;visibility:visible !important;opacity:1 !important;}
+.Blog-card__title{font-family:var(--font-heading);font-size:1.4rem;color:var(--color-text-primary);margin-bottom:var(--space-4);line-height:1.2;display:block !important;visibility:visible !important;opacity:1 !important;}
+.Blog-card__title a{color:var(--color-text-primary);transition:color var(--transition-base);display:block;text-decoration:none;}
+.Blog-card__title a:hover{color:var(--color-accent);}
+.Blog-card__excerpt{font-size:0.85rem;color:var(--color-text-secondary);line-height:1.65;margin-bottom:var(--space-6);display:block !important;visibility:visible !important;opacity:1 !important;flex:1;}
+.Blog-card__footer{display:flex !important;align-items:center;justify-content:space-between;padding-top:var(--space-4);border-top:1px solid var(--color-border);visibility:visible !important;opacity:1 !important;}
+.Blog-card__meta{font-size:0.7rem;color:var(--color-text-muted);display:flex;align-items:center;gap:var(--space-2);}
+.Blog-card__read{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent);display:flex;align-items:center;gap:var(--space-2);transition:gap var(--transition-base);text-decoration:none;}
+.Blog-card:hover .Blog-card__read{gap:var(--space-3);}
+</style>
+</head>
+<body>
+<nav class="navbar" role="navigation" aria-label="Ana navigasyon">
+  <div class="navbar__inner">
+    <a href="../index.html" class="navbar__logo">SPION<span>MEDIA</span></a>
+    <div class="navbar__menu">
+      <a href="../index.html" class="navbar__link">Ana Sayfa</a>
+      <a href="../products.html" class="navbar__link">HİZMETLER</a>
+      <a href="../portfolio.html" class="navbar__link">Portfolyo</a>
+      <div class="navbar__dropdown">
+        <button class="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">hakkımızda <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <div class="navbar__dropdown-menu" role="menu">
+          <a href="../about/vision/index.html" class="navbar__dropdown-item">Vizyon &amp; Misyon</a>
+          <a href="../about/history/index.html" class="navbar__dropdown-item">tarihçe</a>
+          <a href="../about/team/index.html" class="navbar__dropdown-item">Ekip &amp; liderlik</a>
+          <a href="../about/goal/index.html" class="navbar__dropdown-item">Hedefler</a>
+        </div>
+      </div>
+      <a href="../purplestore/index.html" class="navbar__link">MEDYA Store</a>
+      <a href="./index.html" class="navbar__link active">Blog</a>
+      <a href="../contact/index.html" class="navbar__link">iletişim</a>
+    </div>
+    <div class="navbar__actions">
+      <button class="navbar__lang" data-lang-toggle aria-label="Dili değiştir" aria-pressed="false"><span data-lang-label>EN</span></button>
+      <a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Teklif Al</a>
+    </div>
+    <button class="navbar__hamburger" aria-label="menüyü ac" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="navbar__mobile-overlay" role="dialog" aria-label="Mobil menu">
+  <a href="../index.html" class="navbar__mobile-link">Ana Sayfa</a>
+  <a href="../products.html" class="navbar__mobile-link">HİZMETLER</a>
+  <a href="../portfolio.html" class="navbar__mobile-link">Portfolyo</a>
+  <a href="../about/vision/index.html" class="navbar__mobile-sub">Vizyon &amp; Misyon</a>
+  <a href="../about/team/index.html" class="navbar__mobile-sub">Ekip</a>
+  <a href="../purplestore/index.html" class="navbar__mobile-link">MEDYA Store</a>
+  <a href="./index.html" class="navbar__mobile-link">Blog</a>
+  <a href="../contact/index.html" class="navbar__mobile-link">iletişim</a>
+  <a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary navbar__mobile-cta">Teklif Al</a>
+</div>
+
+<div class="Blog-hero">
+  <div class="container">
+    <p class="section-label Blog-hero__label">düşünce Liderligi</p>
+    <h1 class="Blog-hero__title">BILDIKLERIMIZI SAKLAYABILIRIZ. AMA SAKLAMAYI SECIYORUZ.</h1>
+    <p class="Blog-hero__sub">algoritma, içerik, AI ve marka stratejisi uzerine — klisesiz, provokasyon iceren, bilgiye dayali yazilar.</p>
+  </div>
+</div>
+
+<main>
+<section class="section">
+  <div class="container">
+    <div class="Blog-grid">
+
+      <article class="Blog-card reveal">
+        <a href="./sessiz-isgal-icerik-psikolojisi.html" class="Blog-card__img">
+          <img src="../images/slider/4.jpg" alt="sessiz işgal içerik psikolojisi" loading="lazy"/>
+        </a>
+        <div class="Blog-card__body">
+          <div class="Blog-card__cat">içerik Psikolojisi</div>
+          <h2 class="Blog-card__title"><a href="./sessiz-isgal-icerik-psikolojisi.html">sessiz işgal: rakibini Fark Ettirmeden nasıl Gecersin?</a></h2>
+          <p class="Blog-card__excerpt">En tehlikeli rekabet, karsi tarafin Fark etmedigi rekabettir. içerik pazarlamasinda psikolojik ustunlugu nasıl kurarsınız?</p>
+        </div>
+        <div class="Blog-card__footer">
+          <span class="Blog-card__meta">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            8 dk okuma
+          </span>
+          <a href="./sessiz-isgal-icerik-psikolojisi.html" class="Blog-card__read">
+            Oku
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="Blog-card reveal">
+        <a href="./algoritma-acigi-kucuk-markalar.html" class="Blog-card__img">
+          <img src="../images/product/5.jpg" alt="algoritma stratejisi" loading="lazy"/>
+        </a>
+        <div class="Blog-card__body">
+          <div class="Blog-card__cat">sosyal MEDYA Stratejisi</div>
+          <h2 class="Blog-card__title"><a href="./algoritma-acigi-kucuk-markalar.html">algoritmanin Acigi: Kucuk Markalar Buyuk Hesaplari nasıl Gecer?</a></h2>
+          <p class="Blog-card__excerpt">Buyuk butce her zaman kazanmaz. algoritma, dogru oynayanlara kapiyi acar — buyuk olanlara değil.</p>
+        </div>
+        <div class="Blog-card__footer">
+          <span class="Blog-card__meta">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            7 dk okuma
+          </span>
+          <a href="./algoritma-acigi-kucuk-markalar.html" class="Blog-card__read">
+            Oku
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="Blog-card reveal">
+        <a href="./drone-kobilar-icin-zorunlu.html" class="Blog-card__img">
+          <img src="../images/product/8.jpg" alt="Drone çekim KOBİ" loading="lazy"/>
+        </a>
+        <div class="Blog-card__body">
+          <div class="Blog-card__cat">Drone &amp; prodüksiyon</div>
+          <h2 class="Blog-card__title"><a href="./drone-kobilar-icin-zorunlu.html">Drone Cekimi Artik Luks değil, Hayatta Kalma Meselesi</a></h2>
+          <p class="Blog-card__excerpt">rakibiniz drone ile çekim yapiyor, siz hala telefon kamerasiyla Mi? Fark artik gorunur — ve musteri bunu goruyor.</p>
+        </div>
+        <div class="Blog-card__footer">
+          <span class="Blog-card__meta">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            6 dk okuma
+          </span>
+          <a href="./drone-kobilar-icin-zorunlu.html" class="Blog-card__read">
+            Oku
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="Blog-card reveal">
+        <a href="./yapay-zeka-muzik-produksiyonu.html" class="Blog-card__img">
+          <img src="../images/product/2.jpg" alt="AI müzik prodüksiyon" loading="lazy"/>
+        </a>
+        <div class="Blog-card__body">
+          <div class="Blog-card__cat">AI &amp; ses Teknolojisi</div>
+          <h2 class="Blog-card__title"><a href="./yapay-zeka-muzik-produksiyonu.html">Yapay Zeka sesi Calarsa: müzik Produksiyonunun Gelecegi</a></h2>
+          <p class="Blog-card__excerpt">AI artik beste yapiyor, ses kopyaliyor, prodüksiyon maliyetini sifira yaklastiriyor. Bu tehdit Mi, firsat Mi?</p>
+        </div>
+        <div class="Blog-card__footer">
+          <span class="Blog-card__meta">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            6 dk okuma
+          </span>
+          <a href="./yapay-zeka-muzik-produksiyonu.html" class="Blog-card__read">
+            Oku
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="Blog-card reveal">
+        <a href="./mersinden-kuresel-marka.html" class="Blog-card__img">
+          <img src="../images/slider/3.jpg" alt="Mersin kuresel marka" loading="lazy"/>
+        </a>
+        <div class="Blog-card__body">
+          <div class="Blog-card__cat">Marka &amp; büyüme</div>
+          <h2 class="Blog-card__title"><a href="./mersinden-kuresel-marka.html">Mersin'den Kuresel Marka çıkar Mi?</a></h2>
+          <p class="Blog-card__excerpt">İSTANBUL'da OLMAK artik zorunlu değil. Dogru içerik ve stratejiyle Anadolu'dan dunyaya acilmak mumkun — ve ornekleri var.</p>
+        </div>
+        <div class="Blog-card__footer">
+          <span class="Blog-card__meta">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            7 dk okuma
+          </span>
+          <a href="./mersinden-kuresel-marka.html" class="Blog-card__read">
+            Oku
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="next-step">
+  <div class="container">
+    <p class="section-label next-step__label">Sonraki Adim</p>
+    <h2 class="next-step__title">Operasyonu Baslat</h2>
+    <div class="next-step__actions">
+      <a href="../contact/index.html" class="btn btn-primary">Teklif Al &rarr;</a>
+      <a href="../products.html" class="btn btn-ghost">HİZMETLER &rarr;</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__watermark" aria-hidden="true">SPION MEDIA</div>
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="../index.html" class="navbar__logo" style="display:inline-block;margin-bottom:var(--space-4);">SPION<span style="color:var(--color-text-primary)">MEDIA</span></a>
+        <p class="footer__brand-desc">sessiz işgal. Karsi Taraf PAZARLAMA olduğunu Fark etmez.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/spionmedia/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="https://t.me/spionmedia" target="_blank" rel="noopener" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.15.668-.543.832-1.1.517l-3.04-2.24-1.468 1.413c-.162.162-.298.298-.61.298l.217-3.08 5.6-5.058c.244-.217-.053-.337-.377-.12L7.04 14.42l-2.98-.93c-.648-.203-.66-.648.135-.96l11.64-4.49c.54-.196 1.012.12.727.208z"/></svg></a>
+          <a href="https://www.linkedin.com/company/spion-media" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.youtube.com/@spionmedia" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer__col-title">HİZMETLER</h3>
+        <nav class="footer__col-links">
+          <a href="../products.html">tüm HİZMETLER</a>
+          <a href="../products.html#video">Video prodüksiyon</a>
+          <a href="../products.html#ai">Yapay Zeka</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer__col-title">şirket</h3>
+        <nav class="footer__col-links">
+          <a href="../about/vision/index.html">Vizyon &amp; Misyon</a>
+          <a href="../about/team/index.html">Ekip</a>
+          <a href="../career/index.html">Kariyer</a>
+          <a href="./index.html">Blog</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer__col-title">Yasal</h3>
+        <nav class="footer__col-links">
+          <a href="../legal/GP/index.html">gizliLİK politikası</a>
+          <a href="../legal/KK/index.html">kullanım koşulları</a>
+          <a href="../legal/CP/index.html">çerez politikası</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 Spion Media. tüm haklari saklidir.</p>
+      <div class="footer__email"><a href="mailto:spionmediaglobal@gmail.com">spionmediaglobal@gmail.com</a></div>
+    </div>
+  </div>
+</footer>
+<script src="../spion-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "siteName": "Spion Media",
+  "siteTagline": "Trendi Biz Yazarız",
+  "siteDescription": "Spion Media; video prodüksiyon, drone, AI ve sosyal MEDYA ile markanızı rakiplerinize GEÇİRİYORUZ. İSTANBUL ve Mersin.",
+  "contact": {
+    "email": "spionmediaglobal@gmail.com",
+    "phone": "+905525515184",
+    "address": "İstanbul & Mersin, Türkiye"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/spionmedia/",
+    "twitter": "https://x.com/spionmediaX",
+    "tiktok": "https://www.tiktok.com/@spionmedia",
+    "telegram": "https://t.me/spionmedia",
+    "whatsapp": "https://wa.me/905525515184",
+    "linkedin": "https://www.linkedin.com/company/spion-media",
+    "youtube": "https://www.youtube.com/@spionmedia",
+    "medium": "https://medium.com/@spionmedia"
+  },
+  "seo": {
+    "keywords": "video prodüksiyon, drone çekim, AI, sosyal medya, içerik üretimi, Mersin, İstanbul",
+    "author": "Spion Media",
+    "ogImage": "images/logos/square.png"
+  }
+}

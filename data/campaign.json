@@ -1,0 +1,23 @@
+{
+  "active": true,
+  "closeable": true,
+  "icon": "🔥",
+  "title": "YENİ HİZMET: AI Ses Klonlama Stüdyosu",
+  "description": "Türkiye'nin ilk profesyonel AI ses klonlama hizmeti artık Spion Media'da!",
+  "buttonText": "Detayları Keşfet",
+  "buttonLink": "products.html#ai",
+  "image": {
+    "enabled": false,
+    "url": "",
+    "position": "right"
+  },
+  "countdown": {
+    "enabled": false,
+    "endDate": "2025-02-01T23:59:59"
+  },
+  "style": {
+    "gradient": "linear-gradient(135deg, #c8a96e 0%, #8a7248 100%)",
+    "textColor": "#0a0a0a",
+    "backgroundImage": ""
+  }
+}

@@ -1,0 +1,205 @@
+/* ═══════════════════════════════════════════════════════════
+   SPION MEDIA — LANGUAGE SWITCHER STYLES
+   ═══════════════════════════════════════════════════════════ */
+
+/* Language Dropdown Overlay */
+.lang-dropdown {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: var(--space-8);
+}
+
+.lang-dropdown.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lang-dropdown__inner {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sharp);
+  max-width: 800px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: var(--space-8);
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.lang-dropdown.is-open .lang-dropdown__inner {
+  transform: scale(1);
+}
+
+.lang-dropdown__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lang-dropdown__title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--color-text-primary);
+  letter-spacing: 0.05em;
+}
+
+.lang-dropdown__close {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-dropdown__close:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: rotate(90deg);
+}
+
+.lang-dropdown__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-3);
+}
+
+@media (max-width: 768px) {
+  .lang-dropdown__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lang-dropdown__title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lang-dropdown__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lang-item {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sharp);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.lang-item:hover {
+  border-color: var(--color-accent);
+  background: rgba(200, 169, 110, 0.08);
+  transform: translateY(-2px);
+}
+
+.lang-item:active {
+  transform: translateY(0);
+}
+
+/* Language Notification */
+.lang-notification {
+  position: fixed;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--color-accent);
+  color: #0a0a0a;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: var(--radius-sharp);
+  box-shadow: 0 8px 32px rgba(200, 169, 110, 0.4);
+  z-index: 10001;
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.lang-notification.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 768px) {
+  .lang-notification {
+    bottom: var(--space-6);
+    font-size: 0.8rem;
+    padding: 12px 20px;
+    max-width: calc(100% - var(--space-8));
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* Hide Google Translate Elements */
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+.goog-logo-link,
+.goog-te-gadget,
+.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+#google_translate_element {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Fix for Google Translate iframe */
+.skiptranslate iframe {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+/* Smooth transition for translated content */
+body.translated {
+  transition: opacity 0.3s ease;
+}
+
+/* Loading state */
+.lang-loading {
+  pointer-events: none;
+  opacity: 0.6;
+}

@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "slug": "sessiz-isgal-icerik-psikolojisi",
+      "title": "Sessiz İşgal: Rakibini Fark Ettirmeden Nasıl Geçersin?",
+      "category": "İçerik Psikolojisi",
+      "excerpt": "En tehlikeli rekabet, karşı tarafın fark etmediği rekabettir. İçerik pazarlamasında psikolojik üstünlüğü nasıl kurarsınız?",
+      "image": "../images/slider/4.jpg",
+      "readTime": "8 dk okuma",
+      "date": "2025-01-15",
+      "author": "Spion Media",
+      "active": true
+    },
+    {
+      "id": 2,
+      "slug": "algoritma-acigi-kucuk-markalar",
+      "title": "Algoritmanın Açığı: Küçük Markalar Büyük Hesapları Nasıl Geçer?",
+      "category": "Sosyal Medya Stratejisi",
+      "excerpt": "Büyük bütçe her zaman kazanmaz. Algoritma, doğru oynayanlara kapıyı açar — büyük olanlara değil.",
+      "image": "../images/product/5.jpg",
+      "readTime": "7 dk okuma",
+      "date": "2025-01-12",
+      "author": "Spion Media",
+      "active": true
+    },
+    {
+      "id": 3,
+      "slug": "drone-kobilar-icin-zorunlu",
+      "title": "Drone Çekimi Artık Lüks Değil, Hayatta Kalma Meselesi",
+      "category": "Drone & Prodüksiyon",
+      "excerpt": "Rakibiniz drone ile çekim yapıyor, siz hala telefon kamerasıyla mı? Fark artık görünür — ve müşteri bunu görüyor.",
+      "image": "../images/product/8.jpg",
+      "readTime": "6 dk okuma",
+      "date": "2025-01-10",
+      "author": "Spion Media",
+      "active": true
+    },
+    {
+      "id": 4,
+      "slug": "yapay-zeka-muzik-produksiyonu",
+      "title": "Yapay Zeka Sesi Çalarsa: Müzik Prodüksiyonunun Geleceği",
+      "category": "AI & Ses Teknolojisi",
+      "excerpt": "AI artık beste yapıyor, ses kopyalıyor, prodüksiyon maliyetini sıfıra yaklaştırıyor. Bu tehdit mi, fırsat mı?",
+      "image": "../images/product/2.jpg",
+      "readTime": "6 dk okuma",
+      "date": "2025-01-08",
+      "author": "Spion Media",
+      "active": true
+    },
+    {
+      "id": 5,
+      "slug": "mersinden-kuresel-marka",
+      "title": "Mersin'den Küresel Marka Çıkar Mı?",
+      "category": "Marka & Büyüme",
+      "excerpt": "İstanbul'da olmak artık zorunlu değil. Doğru içerik ve stratejiyle Anadolu'dan dünyaya açılmak mümkün — ve örnekleri var.",
+      "image": "../images/slider/3.jpg",
+      "readTime": "7 dk okuma",
+      "date": "2025-01-05",
+      "author": "Spion Media",
+      "active": true
+    }
+  ]
+}

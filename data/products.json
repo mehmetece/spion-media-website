@@ -1,0 +1,103 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "kamera",
+      "name": "DJI Osmo Action 4",
+      "description": "4K aksiyon kamera, su geçirmez gövde",
+      "price": "8.499",
+      "image": "https://images.unsplash.com/photo-1606933248010-ef7e86f6e93a?w=800&q=80",
+      "shopierLink": "https://www.shopier.com/spionshop",
+      "isNew": true,
+      "active": true
+    },
+    {
+      "id": 2,
+      "category": "drone",
+      "name": "DJI Mini 4 Pro",
+      "description": "4K drone, engel algılama, 34 dk uçuş",
+      "price": "24.999",
+      "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&q=80",
+      "shopierLink": "https://www.shopier.com/spionshop",
+      "isNew": true,
+      "active": true
+    },
+    {
+      "id": 3,
+      "category": "ses",
+      "name": "Rode VideoMic Pro+",
+      "description": "Kamera üstü shotgun mikrofon",
+      "price": "5.299",
+      "image": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80",
+      "shopierLink": "https://www.shopier.com/spionshop",
+      "isNew": false,
+      "active": true
+    },
+    {
+      "id": 4,
+      "category": "isik",
+      "name": "Godox SL60W LED",
+      "description": "60W beyaz LED stüdyo ışığı",
+      "price": "3.199",
+      "image": "https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?w=800&q=80",
+      "shopierLink": "https://www.shopier.com/spionshop",
+      "isNew": false,
+      "active": true
+    },
+    {
+      "id": 5,
+      "category": "tripod",
+      "name": "Manfrotto 055 Karbon",
+      "description": "Karbon fiber profesyonel tripod",
+      "price": "7.899",
+      "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&q=80",
+      "shopierLink": "https://www.shopier.com/spionshop",
+      "isNew": false,
+      "active": true
+    },
+    {
+      "id": 6,
+      "category": "aksesuar",
+      "name": "SmallRig Cage Kit",
+      "description": "DSLR/mirrorless kamera kafesi seti",
+      "price": "2.499",
+      "image": "https://images.unsplash.com/photo-1606462146674-23e8a1c39a5d?w=800&q=80",
+      "shopierLink": "https://www.shopier.com/spionshop",
+      "isNew": false,
+      "active": true
+    },
+    {
+      "id": 7,
+      "category": "studyo",
+      "name": "Greenscreen 3x4m",
+      "description": "Profesyonel krom yeşil arka plan",
+      "price": "1.299",
+      "image": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800&q=80",
+      "shopierLink": "https://www.shopier.com/spionshop",
+      "isNew": false,
+      "active": true
+    },
+    {
+      "id": 8,
+      "category": "DİJİTAL",
+      "name": "Ses Efekt Paketi",
+      "description": "500+ profesyonel ses efekti",
+      "price": "299",
+      "image": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80",
+      "shopierLink": "https://www.shopier.com/spionshop",
+      "isNew": true,
+      "active": true
+    },
+    {
+      "id": 9,
+      "category": "DİJİTAL",
+      "name": "LUT Paketi — Sinematik",
+      "description": "50 adet sinematik renk gradyanı",
+      "price": "199",
+      "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80",
+      "shopierLink": "https://www.shopier.com/spionshop",
+      "isNew": true,
+      "active": true
+    }
+  ]
+}

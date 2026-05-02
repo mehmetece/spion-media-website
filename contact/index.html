@@ -1,331 +1,327 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <!-- Temel Meta -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>iletişim — Spion Media</title>
+<meta name="description" content="Spion Media ile İLETİŞİME gecin. 48 saat icinde yanit garantisi. Telegram, e-posta veya form ile ulasabilirsiniz."/>
+<link rel="canonical" href="https://media.spionarmy.com/contact/"/>
+<link rel="icon" href="../images/logos/favicon.png"/>
+<link rel="stylesheet" href="../spion.css"/>
+<style>
+.contact-channels{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);margin-bottom:var(--space-16);}
+.channel-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-sharp);padding:var(--space-8);display:flex;flex-direction:column;gap:var(--space-4);transition:border-color var(--transition-base),transform var(--transition-base);text-decoration:none;}
+.channel-card:hover{border-color:var(--color-accent);transform:translateY(-4px);}
+.channel-card__icon{width:48px;height:48px;border:1px solid var(--color-border);border-radius:var(--radius-sharp);display:flex;align-items:center;justify-content:center;color:var(--color-accent);}
+.channel-card__badge{display:inline-block;font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#0a0a0a;background:var(--color-accent);padding:2px 8px;border-radius:var(--radius-sharp);margin-bottom:var(--space-1);}
+.channel-card__title{font-family:var(--font-heading);font-size:1.3rem;color:var(--color-text-primary);}
+.channel-card__value{font-size:0.82rem;color:var(--color-text-secondary);}
+.channel-card__cta{font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent);margin-top:auto;}
+@media(max-width:768px){.contact-channels{grid-template-columns:1fr;}}
 
-  <!-- SEO Başlık -->
-  <title>İletişim — Spion Army | Prodüksiyon, Kurgu, Animasyon & Sosyal Medya</title>
+.contact-form-wrap{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-sharp);padding:var(--space-12);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);}
+@media(max-width:600px){.form-row{grid-template-columns:1fr;}}
+.form-section-title{font-family:var(--font-heading);font-size:1rem;color:var(--color-text-secondary);letter-spacing:0.1em;margin:var(--space-8) 0 var(--space-4);text-transform:uppercase;}
+.checkbox-group{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);}
+@media(max-width:600px){.checkbox-group{grid-template-columns:1fr 1fr;}}
+.checkbox-item{display:flex;align-items:center;gap:var(--space-2);}
+.checkbox-item input[type=checkbox]{width:16px;height:16px;accent-color:var(--color-accent);cursor:pointer;}
+.checkbox-item label{font-size:0.78rem;color:var(--color-text-secondary);cursor:pointer;}
+.radio-group{display:flex;flex-wrap:wrap;gap:var(--space-4);}
+.radio-item{display:flex;align-items:center;gap:var(--space-2);}
+.radio-item input[type=radio]{width:16px;height:16px;accent-color:var(--color-accent);cursor:pointer;}
+.radio-item label{font-size:0.78rem;color:var(--color-text-secondary);cursor:pointer;}
+.form-actions{display:flex;align-items:center;gap:var(--space-4);margin-top:var(--space-8);flex-wrap:wrap;}
+.form-status{font-size:0.8rem;padding:var(--space-3) var(--space-4);border-radius:var(--radius-sharp);}
+.form-status--success{background:rgba(42,122,74,0.15);border:1px solid var(--color-success);color:#4ade80;}
+.form-status--error{background:rgba(138,42,42,0.15);border:1px solid var(--color-danger);color:#f87171;}
 
-  <!-- Açıklama -->
-  <meta name="description" content="Spion Army ile prodüksiyon, kurgu & post, 3D/animasyon, müzik ve algoritmik sosyal medya hizmetleri için iletişime geçin. Mail uygulamanız tek tıkla açılır." />
-
-  <!-- Robots -->
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-
-  <!-- Anahtar Kelimeler -->
-  <meta name="keywords" content="Spion Army iletişim, prodüksiyon şirketi iletişim, reklam filmi çekim, kurgu post prodüksiyon iletişim, 3D animasyon ajansı, sosyal medya yönetimi ajansı, müzik prodüksiyon stüdyosu" />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://spionarmy.com/contact/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="tr_TR" />
-  <meta property="og:site_name" content="Spion Army" />
-  <meta property="og:title" content="İletişim — Spion Army" />
-  <meta property="og:description" content="Prodüksiyon, kurgu, animasyon ve sosyal medya hizmetleri için Spion Army ile iletişime geçin." />
-  <meta property="og:url" content="https://spionarmy.com/contact/" />
-  <meta property="og:image" content="https://spionarmy.com/images/og/og-cover.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="İletişim — Spion Army" />
-  <meta name="twitter:description" content="Prodüksiyon, kurgu, animasyon ve sosyal medya hizmetleri için Spion Army ile iletişime geçin." />
-  <meta name="twitter:image" content="https://spionarmy.com/images/og/og-cover.jpg" />
-
-  <meta name="theme-color" content="#e6e1e9" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://spionarmy.com/#org",
-        "name": "Spion Army",
-        "url": "https://spionarmy.com/",
-        "logo": "https://spionarmy.com/images/logos/square.png",
-        "email": "info@spionarmy.com.tr",
-        "sameAs": [
-          "https://www.instagram.com/spionarmy/",
-          "https://www.linkedin.com/company/spionarmy",
-          "https://www.youtube.com/@spionarmy",
-          "https://medium.com/@spionarmy"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://spionarmy.com/contact/#webpage",
-        "url": "https://spionarmy.com/contact/",
-        "name": "İletişim — Spion Army",
-        "about": { "@id": "https://spionarmy.com/#org" }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://spionarmy.com/#services",
-        "serviceType": "Video Prodüksiyon, Kurgu & Post, 3D/Animasyon, Sosyal Medya Yönetimi, Müzik Prodüksiyon, Yapay Zekâ İçerik",
-        "provider": { "@id": "https://spionarmy.com/#org" },
-        "areaServed": "TR",
-        "availableChannel": "Online"
-      }
-    ]
-  }
-  </script>
-
-  <!-- Fontlar & İkonlar -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- DİKKAT: CSS & JS AYNI KLASÖR -->
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="shortcut icon" href="../images/logos/favicon.png" type="image/x-icon" />
-  <link rel="icon" href="../images/logos/favicon.png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="../images/logos/apple-touch-icon.png" />
+.telegram-banner{background:linear-gradient(135deg,var(--color-surface) 0%,rgba(200,169,110,0.06) 100%);border:1px solid var(--color-accent);border-radius:var(--radius-sharp);padding:var(--space-12);text-align:center;margin-top:var(--space-16);}
+.telegram-banner__title{font-family:var(--font-heading);font-size:clamp(1.8rem,4vw,3rem);color:var(--color-text-primary);margin-bottom:var(--space-4);}
+.telegram-banner__sub{color:var(--color-text-secondary);margin-bottom:var(--space-8);}
+</style>
 </head>
-
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <img src="../images/logos/square.png" alt="Spion Army Logosu">
-      <h1 class="logo-text">Spion Army</h1>
+<nav class="navbar" role="navigation" aria-label="Ana navigasyon">
+  <div class="navbar__inner">
+    <a href="../index.html" class="navbar__logo">SPION<span>MEDIA</span></a>
+    <div class="navbar__menu">
+      <a href="../index.html" class="navbar__link">Ana Sayfa</a>
+      <a href="../products.html" class="navbar__link">HİZMETLER</a>
+      <a href="../portfolio.html" class="navbar__link">Portfolyo</a>
+      <div class="navbar__dropdown">
+        <button class="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">hakkımızda <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <div class="navbar__dropdown-menu" role="menu">
+          <a href="../about/vision/index.html" class="navbar__dropdown-item" role="menuitem">Vizyon &amp; Misyon</a>
+          <a href="../about/history/index.html" class="navbar__dropdown-item" role="menuitem">tarihçe</a>
+          <a href="../about/team/index.html" class="navbar__dropdown-item" role="menuitem">Ekip &amp; liderlik</a>
+          <a href="../about/goal/index.html" class="navbar__dropdown-item" role="menuitem">Hedefler</a>
+        </div>
+      </div>
+      <a href="../purplestore/index.html" class="navbar__link">MEDYA Store</a>
+      <a href="../Blog/index.html" class="navbar__link">Blog</a>
+      <a href="./index.html" class="navbar__link active">iletişim</a>
     </div>
-    <div class="navbar-list">
-      <ul class="list-item">
-        <li><a href="../index.html">Spion Army</a></li>
-        <li><a href="../froggpt/index.html">Portföy</a></li>
-        <li><a href="../purplestore/index.html">Medya Store</a></li>
-        <li class="hide-item"><a href="./index.html">İletişim</a></li>
-        <li class="respo"><a href="#">Daha Fazla<i class="fa-solid fa-chevron-down"></i></a></li>
-      </ul>
+    <div class="navbar__actions">
+      <button class="navbar__lang" data-lang-toggle aria-label="Dili değiştir" aria-pressed="false"><span data-lang-label>EN</span></button>
+      <a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Teklif Al</a>
     </div>
-    <div class="last-nav">
-      <h1 class="user-text"><a href="../career/index.html">Bize Katıl</a></h1>
-      <a href="../career/index.html"><i class="fa-solid fa-plus"></i></a>
-    </div>
-  </nav>
-
-  <!-- Mobil Hidebar -->
-  <div class="hidebar-list">
-    <ul class="h-list-item">
-      <li><a href="./index.html">İletişim</a></li>
-      <li><a href="../index.html">Ana Sayfa</a></li>
-      <li><a href="../froggpt/index.html">Portföy</a></li>
-      <li><a href="../purplestore/index.html">Medya Store</a></li>
-      <li><a href="../career/index.html">Bize Katıl</a></li>
-    </ul>
+    <button class="navbar__hamburger" aria-label="menüyü ac" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
+</nav>
+<div class="navbar__mobile-overlay" role="dialog" aria-label="Mobil menu">
+  <a href="../index.html" class="navbar__mobile-link">Ana Sayfa</a>
+  <a href="../products.html" class="navbar__mobile-link">HİZMETLER</a>
+  <a href="../portfolio.html" class="navbar__mobile-link">Portfolyo</a>
+  <a href="../about/vision/index.html" class="navbar__mobile-sub">Vizyon &amp; Misyon</a>
+  <a href="../about/team/index.html" class="navbar__mobile-sub">Ekip</a>
+  <a href="../purplestore/index.html" class="navbar__mobile-link">MEDYA Store</a>
+  <a href="../Blog/index.html" class="navbar__mobile-link">Blog</a>
+  <a href="./index.html" class="navbar__mobile-link">iletişim</a>
+  <a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary navbar__mobile-cta">Teklif Al</a>
+</div>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <div class="hide-btn">
-      <i class="fa-solid fa-bars open-icon"></i>
-      <i class="fa-solid fa-times close-icon"></i>
-    </div>
-    <ul class="sidebar-list">
-      <li><a href="../index.html">Spion Army</a></li>
-      <li><a href="../froggpt/index.html">Portföy</a></li>
-      <li><a href="../purplestore/index.html">Medya Store</a></li>
-      <li><a href="../about/product/index.html">Medya Ürünleri</a></li>
-      <li><a href="./index.html">İletişim</a></li>
-      <li><a href="../career/index.html">Bize Katıl</a></li>
-    </ul>
+<div class="page-hero section--dark">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Ana Sayfa</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <span class="breadcrumb__current">iletişim</span>
+    </nav>
+    <p class="section-label page-hero__label">Operasyonu Baslat</p>
+    <h1 class="page-hero__title">iletişim</h1>
+    <p class="page-hero__sub">48 saat icinde yanit garantisi. Brief olmadan da yazabilirsin.</p>
   </div>
+</div>
 
-  <!-- ===== CONTACT (mailto) ===== -->
-  <section class="container contact-career" aria-labelledby="contact-title">
-    <div class="cc-wrap">
-      <div class="cc-card">
-        <header class="cc-header">
-          <p class="cc-eyebrow">İletişim</p>
-          <h1 id="contact-title" class="cc-title">Bizimle İletişime Geç</h1>
-          <p class="cc-lead">Formu doldurduğunda tek tıkla mail uygulaman açılır; konu ve gövde hazır olur.</p>
-        </header>
+<main>
+<section class="section" aria-labelledby="channels-title">
+  <div class="container">
+    <h2 class="sr-only" id="channels-title">iletişim Kanallari</h2>
+    <div class="contact-channels">
+      <a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="channel-card reveal" aria-label="Telegram ile iletişim">
+        <div class="channel-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.15.668-.543.832-1.1.517l-3.04-2.24-1.468 1.413c-.162.162-.298.298-.61.298l.217-3.08 5.6-5.058c.244-.217-.053-.337-.377-.12L7.04 14.42l-2.98-.93c-.648-.203-.66-.648.135-.96l11.64-4.49c.54-.196 1.012.12.727.208z"/></svg>
+        </div>
+        <div>
+          <span class="channel-card__badge">En Hizli Yanit</span>
+          <div class="channel-card__title">Telegram</div>
+          <div class="channel-card__value">@spionarmy</div>
+        </div>
+        <span class="channel-card__cta">Telegram'i Ac &rarr;</span>
+      </a>
+      <a href="mailto:spionmediaglobal@gmail.com" class="channel-card reveal" aria-label="E-posta ile iletişim">
+        <div class="channel-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="channel-card__title">E-posta</div>
+          <div class="channel-card__value">spionmediaglobal@gmail.com</div>
+        </div>
+        <span class="channel-card__cta">Mail Gonder &rarr;</span>
+      </a>
+      <div class="channel-card reveal" style="cursor:default;">
+        <div class="channel-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="channel-card__title">Konum</div>
+          <div class="channel-card__value">İSTANBUL &amp; Mersin, Turkiye</div>
+          <div class="channel-card__value" style="margin-top:4px;font-size:0.72rem;color:var(--color-text-muted);">UTC+3 (Turkiye Saati)</div>
+        </div>
+        <span class="channel-card__cta" style="color:var(--color-text-muted);">Yuz yuze gorusme için yazin</span>
+      </div>
+    </div>
 
-        <div class="cc-grid">
-          <div class="cc-info">
-            <h2 class="cc-subtitle">Spion Media Team</h2>
-            <ul class="cc-list">
-              <li><strong>E-posta:</strong> <a href="mailto:info@spionarmy.com.tr">info@spionarmy.com.tr</a></li>
-              <!-- <li><strong>Telefon:</strong> <a href="tel:+902">+90 212 222 22 22</a></li> -->
-              <li><strong>Adres:</strong>Istanbul, Turkey</li>
-            </ul>
-            <div class="cc-social">
-              <a href="https://www.instagram.com/spionarmy/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/spionarmy" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="https://www.youtube.com/@spionarmy" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-              <a href="https://medium.com/@spionarmy" target="_blank" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
-            </div>
+    <!-- FORM -->
+    <div class="contact-form-wrap reveal" id="form">
+      <p class="section-label">Akilli iletişim Formu</p>
+      <h2 style="font-family:var(--font-heading);font-size:clamp(1.8rem,4vw,3rem);margin-bottom:var(--space-8);">BRIEF GONDER</h2>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="c-name">Ad Soyad *</label>
+            <input id="c-name" name="name" type="text" placeholder="Adiniz Soyadiniz" required autocomplete="name"/>
           </div>
+          <div class="form-field">
+            <label for="c-email">E-posta *</label>
+            <input id="c-email" name="email" type="email" placeholder="ornek@eposta.com" required autocomplete="email"/>
+          </div>
+        </div>
+        <div class="form-row" style="margin-top:var(--space-6);">
+          <div class="form-field">
+            <label for="c-phone">Telefon</label>
+            <input id="c-phone" name="phone" type="tel" placeholder="+90 ..." autocomplete="tel"/>
+          </div>
+          <div class="form-field">
+            <label for="c-brand">şirket / Marka Adi</label>
+            <input id="c-brand" name="brand" type="text" placeholder="Marka adiniz"/>
+          </div>
+        </div>
 
-          <form class="cc-form" id="contactMailto" novalidate>
-            <div class="row-2">
-              <div class="field">
-                <label for="name">Ad Soyad *</label>
-                <input id="name" name="name" type="text" placeholder="Adınız Soyadınız" required>
-              </div>
-              <div class="field">
-                <label for="email">E-posta *</label>
-                <input id="email" name="email" type="email" placeholder="ornek@eposta.com" required>
-              </div>
-            </div>
+        <p class="form-section-title">Hangi HİZMETLER?</p>
+        <div class="checkbox-group">
+          <div class="checkbox-item"><input type="checkbox" id="s-video" name="services" value="Video prodüksiyon"/><label for="s-video">Video prodüksiyon</label></div>
+          <div class="checkbox-item"><input type="checkbox" id="s-drone" name="services" value="Drone çekim"/><label for="s-drone">Drone çekim</label></div>
+          <div class="checkbox-item"><input type="checkbox" id="s-ai" name="services" value="AI Hizmetleri"/><label for="s-ai">AI Hizmetleri</label></div>
+          <div class="checkbox-item"><input type="checkbox" id="s-social" name="services" value="sosyal MEDYA"/><label for="s-social">sosyal MEDYA</label></div>
+          <div class="checkbox-item"><input type="checkbox" id="s-3d" name="services" value="3D/animasyon"/><label for="s-3d">3D / animasyon</label></div>
+          <div class="checkbox-item"><input type="checkbox" id="s-müzik" name="services" value="müzik prodüksiyon"/><label for="s-müzik">müzik prodüksiyon</label></div>
+          <div class="checkbox-item"><input type="checkbox" id="s-marka" name="services" value="Marka mimarisi"/><label for="s-marka">Marka mimarisi</label></div>
+          <div class="checkbox-item"><input type="checkbox" id="s-DİJİTAL" name="services" value="DİJİTAL çözümler"/><label for="s-DİJİTAL">DİJİTAL çözümler</label></div>
+          <div class="checkbox-item"><input type="checkbox" id="s-diger" name="services" value="Diger"/><label for="s-diger">Diger</label></div>
+        </div>
 
-            <div class="row-2">
-              <div class="field">
-                <label for="phone">Telefon</label>
-                <input id="phone" name="phone" type="tel" placeholder="+90 ...">
-              </div>
-              <div class="field">
-                <label for="subject">Konu *</label>
-                <input id="subject" name="subject" type="text" placeholder="Konu başlığı" required>
-              </div>
-            </div>
+        <p class="form-section-title">Butce Araliginiz</p>
+        <div class="radio-group">
+          <div class="radio-item"><input type="radio" id="b1" name="budget" value="10.000 TL alti"/><label for="b1">10.000&#8378; alti</label></div>
+          <div class="radio-item"><input type="radio" id="b2" name="budget" value="10.000-30.000 TL"/><label for="b2">10.000 &ndash; 30.000&#8378;</label></div>
+          <div class="radio-item"><input type="radio" id="b3" name="budget" value="30.000-75.000 TL"/><label for="b3">30.000 &ndash; 75.000&#8378;</label></div>
+          <div class="radio-item"><input type="radio" id="b4" name="budget" value="75.000 TL+"/><label for="b4">75.000&#8378;+</label></div>
+        </div>
 
-            <div class="field">
-              <label for="message">Mesaj *</label>
-              <textarea id="message" name="message" rows="5" placeholder="Mesajınızı yazın..." required></textarea>
-              <span class="hint">Gönder’e bastığınızda e-posta uygulamanız <strong>info@spionarmy.com.tr</strong> adresine yeni bir e-posta oluşturur. Ekleri orada ekleyebilirsiniz.</span>
-            </div>
+        <div class="form-field" style="margin-top:var(--space-8);">
+          <label for="c-message">Proje açıklamasi *</label>
+          <textarea id="c-message" name="message" rows="5" placeholder="Projenizi, hedeflerinizi ve beklentilerinizi kisaca anlatın..." required></textarea>
+        </div>
 
-            <input type="text" name="website" id="website" style="display:none">
+        <input type="text" name="website" id="c-honeypot" style="display:none" tabindex="-1" autocomplete="off"/>
 
-            <div class="actions">
-              <button type="submit" class="btn-primary">Gönder</button>
-              <a id="fallbackLink" class="btn-ghost" href="mailto:info@spionarmy.com.tr?subject=İletişim%20Talebi" aria-label="Mail uygulamasını aç (boş içerik)">E-posta Aç</a>
-              <span id="cstatus" class="hint" role="status" aria-live="polite"></span>
-            </div>
-          </form>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">OPERASYON Alindi &rarr;</button>
+          <a id="c-fallback" href="mailto:spionmediaglobal@gmail.com" class="btn btn-ghost">Direkt Mail Gonder</a>
+        </div>
+        <div id="c-status" role="status" aria-live="polite" style="margin-top:var(--space-4);"></div>
+      </form>
+    </div>
+
+    <!-- TELEGRAM BANNER -->
+    <div class="telegram-banner reveal">
+      <p class="section-label">Aninda Gorusmek Ister Misin?</p>
+      <h2 class="telegram-banner__title">TELEGRAM'DA YAZ</h2>
+      <p class="telegram-banner__sub">En hizli yanit kanalimiz. Brief olmadan da yazabilirsin.</p>
+      <a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.15.668-.543.832-1.1.517l-3.04-2.24-1.468 1.413c-.162.162-.298.298-.61.298l.217-3.08 5.6-5.058c.244-.217-.053-.337-.377-.12L7.04 14.42l-2.98-.93c-.648-.203-.66-.648.135-.96l11.64-4.49c.54-.196 1.012.12.727.208z"/></svg>
+        t.me/spionmedia
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+<!-- NEXT STEP -->
+<div class="next-step">
+  <div class="container">
+    <p class="section-label next-step__label">Sonraki Adim</p>
+    <h2 class="next-step__title">Portfolyomuzu Incele</h2>
+    <div class="next-step__actions">
+      <a href="../portfolio.html" class="btn btn-ghost">Portfolyo &rarr;</a>
+      <a href="../products.html" class="btn btn-ghost">HİZMETLER &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__watermark" aria-hidden="true">SPION MEDIA</div>
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="../index.html" class="navbar__logo" style="display:inline-block;margin-bottom:var(--space-4);">SPION<span style="color:var(--color-text-primary)">MEDIA</span></a>
+        <p class="footer__brand-desc">sessiz işgal. Karsi Taraf PAZARLAMA olduğunu Fark etmez.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/spionmedia/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="https://x.com/spionmediaX" target="_blank" rel="noopener" aria-label="X / Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.tiktok.com/@spionmedia" target="_blank" rel="noopener" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg></a>
+          <a href="https://t.me/spionmedia" target="_blank" rel="noopener" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.15.668-.543.832-1.1.517l-3.04-2.24-1.468 1.413c-.162.162-.298.298-.61.298l.217-3.08 5.6-5.058c.244-.217-.053-.337-.377-.12L7.04 14.42l-2.98-.93c-.648-.203-.66-.648.135-.96l11.64-4.49c.54-.196 1.012.12.727.208z"/></svg></a>
+          <a href="https://www.linkedin.com/company/spion-media" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.youtube.com/@spionmedia" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+          <a href="https://medium.com/@spionmedia" target="_blank" rel="noopener" aria-label="Medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <script>
-    (function () {
-      const form = document.getElementById('contactMailto');
-      const status = document.getElementById('cstatus');
-      const fallback = document.getElementById('fallbackLink');
-
-      function buildMailto(name, email, phone, subject, message) {
-        const to = 'info@spionarmy.com.tr';
-        const safeSubject = subject && subject.trim() ? subject.trim() : 'İletişim Talebi';
-        const lines = [
-          'Spion Army İletişim Formu',
-          '--------------------------',
-          `Ad Soyad: ${name || '-'}`,
-          `E-posta: ${email || '-'}`,
-          `Telefon: ${phone || '-'}`,
-          '',
-          'Mesaj:',
-          (message || '-')
-        ];
-        const body = encodeURIComponent(lines.join('\r\n'));
-        return `mailto:${to}?subject=${encodeURIComponent(safeSubject)}&body=${body}`;
-      }
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (form.website && form.website.value) { status.textContent = 'İşlem iptal edildi.'; return; }
-        if (!form.checkValidity()) { status.textContent = 'Lütfen zorunlu alanları doldurun.'; return; }
-
-        const data = new FormData(form);
-        const href = buildMailto(
-          data.get('name'),
-          data.get('email'),
-          data.get('phone'),
-          data.get('subject'),
-          data.get('message')
-        );
-
-        status.textContent = 'Mail uygulaması açılıyor...';
-        window.location.href = href;
-        fallback.setAttribute('href', href);
-      });
-    })();
-  </script>
-  <!-- ===== /CONTACT ===== -->
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-column">
-        <ul>
-          <h1 class="footer-column-header">Medya Operasyonları</h1>
-          <li><a href="../investor/index.html">İşbirlikleri</a></li>
-          <li><a href="../sponsor/index.html">Sponsorlar</a></li>
-        </ul>
+      <div>
+        <h3 class="footer__col-title">HİZMETLER</h3>
+        <nav class="footer__col-links" aria-label="HİZMETLER">
+          <a href="../products.html#video">Video prodüksiyon</a>
+          <a href="../products.html#drone">Drone çekim</a>
+          <a href="../products.html#ai">Yapay Zeka</a>
+          <a href="../products.html">tüm HİZMETLER</a>
+        </nav>
       </div>
-
-      <div class="footer-column">
-        <ul>
-          <h1 class="footer-column-header">Hizmetler</h1>
-          <li><a href="../froggpt/index.html">Portföy</a></li>
-          <li><a href="../purplestore/index.html">Medya Store</a></li>
-          <li><a href="./index.html">İletişim</a></li>
-        </ul>
+      <div>
+        <h3 class="footer__col-title">şirket</h3>
+        <nav class="footer__col-links" aria-label="şirket">
+          <a href="../about/vision/index.html">Vizyon &amp; Misyon</a>
+          <a href="../about/team/index.html">Ekip</a>
+          <a href="../career/index.html">Kariyer</a>
+          <a href="../Blog/index.html">Blog</a>
+        </nav>
       </div>
-
-      <div class="footer-column">
-        <ul>
-          <h1 class="footer-column-header">Spion Army</h1>
-          <li><a href="../about/vision/index.html">Vizyon &amp; Misyon</a></li>
-          <li><a href="../about/history/index.html">Şirketin Tarihçesi</a></li>
-          <li><a href="../about/product/index.html">Ürünler ve Hizmetler</a></li>
-          <li><a href="../about/team/index.html">Ekip ve Liderlik</a></li>
-          <li><a href="../about/goal/index.html">Başarılar ve Gelecek Hedefleri</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <ul>
-          <h1 class="footer-column-header">Yasal Şartlar</h1>
-          <li><a href="../legal/GP/index.html">Gizlilik Politikası</a></li>
-          <li><a href="../legal/KK/index.html">Kullanım Koşulları</a></li>
-          <li><a href="../legal/CP/index.html">Çerez Politikası</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <ul>
-          <h1 class="footer-column-header">Şirket</h1>
-          <li><a href="../career/index.html">Kariyer</a></li>
-        </ul>
-      </div>
-
-      <div class="social-media">
-        <a href="https://www.instagram.com/spionarmy/?next=%2F" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/spionarmy?trk=public_profile_topcard-current-company" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.youtube.com/@spionarmy" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://medium.com/@spionarmy" title="Medium"><i class="fa-brands fa-medium"></i></a>
+      <div>
+        <h3 class="footer__col-title">Yasal</h3>
+        <nav class="footer__col-links" aria-label="Yasal">
+          <a href="../legal/GP/index.html">gizliLİK politikası</a>
+          <a href="../legal/KK/index.html">kullanım koşulları</a>
+          <a href="../legal/CP/index.html">çerez politikası</a>
+        </nav>
       </div>
     </div>
-
-    <div class="last-fot">
-      <div class="slect-lang">
-        <div class="lang-item">
-          <h4 class="select-lang-text">English</h4>
-          <a href="https://spionarmy.com"><i class="fa-solid fa-language"></i></a>
-        </div>
-      </div>
-
-      <div class="copyright">
-        &copy; 2025 Spion Army. Tüm hakları saklıdır.
-      </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 Spion Media. tüm haklari saklidir.</p>
+      <div class="footer__email"><a href="mailto:spionmediaglobal@gmail.com">spionmediaglobal@gmail.com</a></div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <!-- SCROLL JS -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script src="../spion-nav.js"></script>
+<script>
+(function(){
+  var form = document.getElementById('contactForm');
+  var statusEl = document.getElementById('c-status');
+  var fallback = document.getElementById('c-fallback');
 
-  <!-- DİKKAT: JS AYNI KLASÖR -->
-  <script src="./main.js"></script>
+  function getChecked(name){
+    var vals=[];
+    document.querySelectorAll('input[name="'+name+'"]:checked').forEach(function(el){vals.push(el.value);});
+    return vals.join(', ') || '-';
+  }
+
+  function buildMailto(data){
+    var to='spionmediaglobal@gmail.com';
+    var services=getChecked('services');
+    var budget=getChecked('budget');
+    var subject='[SpionMedia] '+services+' - '+(data.get('name')||'Anonim');
+    var lines=[
+      'Spion Media iletişim Formu',
+      '----------------------------',
+      'Ad Soyad: '+(data.get('name')||'-'),
+      'E-posta: '+(data.get('email')||'-'),
+      'Telefon: '+(data.get('phone')||'-'),
+      'şirket/Marka: '+(data.get('brand')||'-'),
+      'HİZMETLER: '+services,
+      'Butce: '+budget,
+      '',
+      'Proje açıklamasi:',
+      (data.get('message')||'-')
+    ];
+    return 'mailto:'+to+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\r\n'));
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var honeypot=document.getElementById('c-honeypot');
+    if(honeypot&&honeypot.value){return;}
+    if(!form.checkValidity()){
+      statusEl.innerHTML='<div class="form-status form-status--error">Lutfen zorunlu alanlari doldurun.</div>';
+      return;
+    }
+    var data=new FormData(form);
+    var href=buildMailto(data);
+    fallback.setAttribute('href',href);
+    statusEl.innerHTML='<div class="form-status form-status--success">OPERASYON alindi. 24 saat icinde yanit verilecek.</div>';
+    window.loçatıon.href=href;
+  });
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>500 - Sunucu Hatası | Spion Media</title>
+<link rel="icon" href="/images/logos/favicon.png"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#0a0a0a;color:#f0ede8;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
+.error-container{text-align:center;max-width:600px;}
+.error-code{font-size:clamp(6rem,15vw,12rem);font-weight:900;color:#8a2a2a;line-height:1;margin-bottom:20px;letter-spacing:-0.05em;}
+.error-title{font-size:clamp(1.5rem,4vw,2.5rem);color:#f0ede8;margin-bottom:16px;font-weight:700;}
+.error-desc{font-size:1rem;color:#888;line-height:1.6;margin-bottom:40px;}
+.error-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:4px;font-size:0.9rem;font-weight:600;text-decoration:none;transition:all 0.3s ease;}
+.btn-primary{background:#c8a96e;color:#0a0a0a;border:2px solid #c8a96e;}
+.btn-primary:hover{background:transparent;color:#c8a96e;}
+.btn-ghost{background:transparent;color:#c8a96e;border:2px solid #c8a96e;}
+.btn-ghost:hover{background:#c8a96e;color:#0a0a0a;}
+.error-info{margin-top:40px;padding:20px;background:#111;border:1px solid #222;border-radius:4px;text-align:left;}
+.error-info h3{font-size:0.9rem;color:#c8a96e;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.1em;}
+.error-info ul{list-style:none;padding:0;}
+.error-info li{padding:8px 0;color:#888;font-size:0.85rem;border-bottom:1px solid #1a1a1a;}
+.error-info li:last-child{border-bottom:none;}
+.error-info li::before{content:"→";color:#c8a96e;margin-right:8px;}
+@media(max-width:576px){.error-actions{flex-direction:column;width:100%;}.btn{width:100%;justify-content:center;}}
+</style>
+</head>
+<body>
+<div class="error-container">
+  <div class="error-code">500</div>
+  <h1 class="error-title">Sunucu Hatası</h1>
+  <p class="error-desc">
+    Üzgünüz, sunucumuzda bir hata oluştu. Teknik ekibimiz durumdan haberdar edildi ve 
+    sorunu en kısa sürede çözecek. Lütfen birkaç dakika sonra tekrar deneyin.
+  </p>
+  
+  <div class="error-actions">
+    <a href="/" class="btn btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Ana Sayfa
+    </a>
+    <a href="javascript:location.reload()" class="btn btn-ghost">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>
+      Yenile
+    </a>
+  </div>
+  
+  <div class="error-info">
+    <h3>Ne Yapabilirsiniz?</h3>
+    <ul>
+      <li>Sayfayı yenilemeyi deneyin</li>
+      <li>Birkaç dakika bekleyip tekrar deneyin</li>
+      <li>Tarayıcı önbelleğinizi temizleyin</li>
+      <li>Sorun devam ederse bizimle iletişime geçin</li>
+    </ul>
+  </div>
+  
+  <div style="margin-top:40px;">
+    <a href="/contact/index.html" style="color:#c8a96e;text-decoration:none;font-size:0.9rem;">
+      Destek için iletişime geçin →
+    </a>
+  </div>
+</div>
+</body>
+</html>

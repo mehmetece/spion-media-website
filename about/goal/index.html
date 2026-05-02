@@ -1,359 +1,264 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
-
 <head>
-    <!-- Temel Meta -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Başlık -->
-    <title>Spion Army — Başarılar ve Gelecek Hedefleri</title>
-
-    <!-- Meta Açıklama -->
-    <meta name="description"
-        content="Spion Army; trend terazisini tutan prodüksiyon & içerik üssü. Başarı kriterlerimiz ve gelecek hedeflerimizle medyada standardı yeniden tanımlıyoruz." />
-
-    <!-- Robots -->
-    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-
-    <!-- Anahtar Kelimeler -->
-    <meta name="keywords"
-        content="Spion Army başarılar, medya hedefleri, prodüksiyon, kurgu, 3D animasyon, sosyal medya büyümesi, yapay zeka içerik, müzik prodüksiyon" />
-
-    <!-- Dil -->
-    <meta http-equiv="content-language" content="tr" />
-
-    <!-- Canonical (alan adını kendi domainin ile güncelle) -->
-    <link rel="canonical" href="https://www.spionarmy.com.tr" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="tr_TR" />
-    <meta property="og:site_name" content="Spion Army" />
-    <meta property="og:title" content="Spion Army — Başarılar ve Gelecek Hedefleri" />
-    <meta property="og:description"
-        content="Başarı metriklerimiz ve hedef haritamızla medya sahnesinde standardı belirliyoruz." />
-    <meta property="og:url" content="https://www.spionarmy.com.tr" />
-    <meta property="og:image" content="https://www.spionarmy.com.tr" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Spion Army — Başarılar ve Gelecek Hedefleri" />
-    <meta name="twitter:description"
-        content="Başarı metriklerimiz ve hedef haritamızla medya sahnesinde standardı belirliyoruz." />
-    <meta name="twitter:image" content="https://www.spionarmy.com.tr" />
-
-    <!-- Tema Rengi -->
-    <meta name="theme-color" content="#e6e1e9" />
-
-    <!-- Structured Data (Organization + WebSite) -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.spionarmy.com.tr",
-        "name": "Spion Army",
-        "url": "https://www.spionarmy.com.tr",
-        "logo": "https://www.spionarmy.com.trimages/logos/square.png",
-        "email": "info@spionarmy.com",
-        "sameAs": [
-          "https://www.instagram.com/spionarmy/",
-          "https://www.linkedin.com/company/spionarmy",
-          "https://www.youtube.com/@spionarmy",
-          "https://medium.com/@spionarmy"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.spionarmy.com.tr#website",
-        "url": "https://www.spionarmy.com.tr",
-        "name": "Spion Army",
-        "publisher": { "@id": "https://www.spionarmy.com.tr" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.spionarmy.com.tr?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    ]
-  }
-  </script>
-
-    <!-- Fontlar / İkonlar -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Stil & Favicon (goal klasöründen köke göre) -->
-    <link rel="stylesheet" href="../../styles.css" />
-    <link rel="shortcut icon" href="../../images/logos/favicon.png" type="image/x-icon" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hedefler — Spion Media | Basarilar ve Gelecek</title>
+<meta name="description" content="Spion Media hedefleri ve basari metrikleri. Trend terazisini tutan merkez olarak pazar standardini belirliyoruz."/>
+<link rel="canonical" href="https://media.spionarmy.com/about/goal/"/>
+<link rel="icon" href="../../images/logos/favicon.png"/>
+<link rel="stylesheet" href="../../spion.css"/>
+<style>
+.goal-lead{font-family:var(--font-heading);font-size:clamp(1.8rem,4vw,3rem);line-height:1.15;color:var(--color-text-primary);margin-bottom:var(--space-12);}
+.goal-lead em{color:var(--color-accent);font-style:normal;}
+.okr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);margin:var(--space-12) 0;}
+@media(max-width:768px){.okr-grid{grid-template-columns:1fr;}}
+.okr-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-sharp);padding:var(--space-8);transition:border-color var(--transition-base);}
+.okr-card:hover{border-color:var(--color-accent);}
+.okr-card__period{font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-4);}
+.okr-card__title{font-family:var(--font-heading);font-size:1.2rem;color:var(--color-text-primary);margin-bottom:var(--space-6);}
+.okr-card__items{display:flex;flex-direction:column;gap:var(--space-3);}
+.okr-card__item{display:flex;align-items:flex-start;gap:var(--space-3);font-size:0.82rem;color:var(--color-text-secondary);line-height:1.6;}
+.okr-card__item::before{content:"—";color:var(--color-accent);flex-shrink:0;}
+.metrics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);margin:var(--space-12) 0;}
+@media(max-width:768px){.metrics-grid{grid-template-columns:1fr;}}
+.metric-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-sharp);padding:var(--space-8);}
+.metric-card__icon{width:40px;height:40px;border:1px solid var(--color-border);border-radius:var(--radius-sharp);display:flex;align-items:center;justify-content:center;color:var(--color-accent);margin-bottom:var(--space-6);}
+.metric-card__title{font-family:var(--font-heading);font-size:1.1rem;color:var(--color-text-primary);margin-bottom:var(--space-4);}
+.metric-card__desc{font-size:0.82rem;color:var(--color-text-secondary);line-height:1.65;}
+.achievement-row{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-6);margin:var(--space-12) 0;}
+@media(max-width:600px){.achievement-row{grid-template-columns:1fr;}}
+.achievement-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-sharp);padding:var(--space-8);}
+.achievement-card__label{font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-4);}
+.achievement-card__title{font-family:var(--font-heading);font-size:1.2rem;color:var(--color-text-primary);margin-bottom:var(--space-4);}
+.achievement-card__list{display:flex;flex-direction:column;gap:var(--space-3);}
+.achievement-card__item{display:flex;align-items:flex-start;gap:var(--space-3);font-size:0.82rem;color:var(--color-text-secondary);line-height:1.6;}
+.achievement-card__item::before{content:"—";color:var(--color-accent);flex-shrink:0;}
+.final-quote{background:linear-gradient(135deg,var(--color-surface) 0%,rgba(200,169,110,0.04) 100%);border:1px solid var(--color-accent);border-radius:var(--radius-sharp);padding:var(--space-12);text-align:center;margin-top:var(--space-16);}
+.final-quote__text{font-family:var(--font-heading);font-size:clamp(1.4rem,3vw,2.2rem);color:var(--color-text-primary);margin-bottom:var(--space-4);}
+.final-quote__sub{font-size:0.82rem;color:var(--color-text-muted);}
+</style>
 </head>
-
 <body>
-    <!-- NAV -->
-    <nav class="navbar">
-        <div class="navbar-logo">
-            <img src="../../images/logos/square.png" alt="Resim Bulunamadı" />
-            <h1 class="logo-text">Spion Army</h1>
+<nav class="navbar" role="navigation" aria-label="Ana navigasyon">
+  <div class="navbar__inner">
+    <a href="../../index.html" class="navbar__logo">SPION<span>MEDIA</span></a>
+    <div class="navbar__menu">
+      <a href="../../index.html" class="navbar__link">Ana Sayfa</a>
+      <a href="../../products.html" class="navbar__link">HİZMETLER</a>
+      <a href="../../portfolio.html" class="navbar__link">Portfolyo</a>
+      <div class="navbar__dropdown">
+        <button class="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">hakkımızda <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <div class="navbar__dropdown-menu" role="menu">
+          <a href="../vision/index.html" class="navbar__dropdown-item">Vizyon &amp; Misyon</a>
+          <a href="../history/index.html" class="navbar__dropdown-item">tarihçe</a>
+          <a href="../team/index.html" class="navbar__dropdown-item">Ekip &amp; liderlik</a>
+          <a href="./index.html" class="navbar__dropdown-item" style="color:var(--color-accent)">Hedefler</a>
         </div>
-        <div class="navbar-list">
-            <ul class="list-item">
-                <li><a href="../../index.html">Spion Army</a></li>
-                <li><a href="../../froggpt/index.html">Portföy</a></li>
-                <li><a href="../../purplestore/index.html">Medya Store</a></li>
-                <li class="hide-item"><a href="../../contact/index.html">İletişim</a></li>
-                <li class="respo"><a href="#">Daha Fazla<i class="fa-solid fa-chevron-down"></i></a></li>
-            </ul>
-        </div>
-        <div class="last-nav">
-            <h1 class="user-text"><a href="../../career/index.html">Bize Katıl</a></h1>
-            <a href="../../career/index.html"><i class="fa-solid fa-plus"></i></a>
-        </div>
+      </div>
+      <a href="../../purplestore/index.html" class="navbar__link">MEDYA Store</a>
+      <a href="../../Blog/index.html" class="navbar__link">Blog</a>
+      <a href="../../contact/index.html" class="navbar__link">iletişim</a>
+    </div>
+    <div class="navbar__actions">
+      <button class="navbar__lang" data-lang-toggle aria-label="Dili değiştir" aria-pressed="false"><span data-lang-label>EN</span></button>
+      <a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Teklif Al</a>
+    </div>
+    <button class="navbar__hamburger" aria-label="menüyü ac" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="navbar__mobile-overlay" role="dialog" aria-label="Mobil menu">
+  <a href="../../index.html" class="navbar__mobile-link">Ana Sayfa</a>
+  <a href="../../products.html" class="navbar__mobile-link">HİZMETLER</a>
+  <a href="../../portfolio.html" class="navbar__mobile-link">Portfolyo</a>
+  <a href="../vision/index.html" class="navbar__mobile-sub">Vizyon &amp; Misyon</a>
+  <a href="../history/index.html" class="navbar__mobile-sub">tarihçe</a>
+  <a href="../team/index.html" class="navbar__mobile-sub">Ekip</a>
+  <a href="./index.html" class="navbar__mobile-sub">Hedefler</a>
+  <a href="../../purplestore/index.html" class="navbar__mobile-link">MEDYA Store</a>
+  <a href="../../contact/index.html" class="navbar__mobile-link">iletişim</a>
+  <a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary navbar__mobile-cta">Teklif Al</a>
+</div>
+
+<div class="page-hero section--dark">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../../index.html">Ana Sayfa</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <a href="../vision/index.html">hakkımızda</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <span class="breadcrumb__current">Hedefler</span>
     </nav>
+    <p class="section-label page-hero__label">Basarilar ve Gelecek</p>
+    <h1 class="page-hero__title">GORUNENLER<br>GERCEGI YANSITMAZ</h1>
+    <p class="page-hero__sub">Vizyonumuzu anlatmak yerine hissettiririz. Hedef haritamiz ve basari metriklerimiz.</p>
+  </div>
+</div>
 
-    <div class="hidebar-list">
-        <ul class="h-list-item">
-            <li><a href="../../contact/index.html">İletişim</a></li>
-        </ul>
+<main>
+<section class="section">
+  <div class="container">
+
+    <h2 class="goal-lead reveal">
+      Trend terazisini tutan<br>
+      <em>merkez OLMAK</em> için<br>
+      her OPERASYON bir adim.
+    </h2>
+
+    <p class="section-label reveal">Hedef Haritasi</p>
+    <h2 class="section-title reveal">OKR HARITASI</h2>
+    <span class="section-title-line reveal" aria-hidden="true"></span>
+
+    <div class="okr-grid">
+      <div class="okr-card reveal">
+        <div class="okr-card__period">Kisa Vade</div>
+        <h3 class="okr-card__title">Gorunurluk &amp; Erisim</h3>
+        <div class="okr-card__items">
+          <div class="okr-card__item">Secilen trendlerde %100 gorunurluk ve viral erisim pencereleri.</div>
+          <div class="okr-card__item">Her operasyonda olculebilir sonuç: izlenme, donusum, büyüme.</div>
+          <div class="okr-card__item">9 hizmet alaninda referans proje tamamlama.</div>
+        </div>
+      </div>
+      <div class="okr-card reveal">
+        <div class="okr-card__period">Orta Vade</div>
+        <h3 class="okr-card__title">Kulturel Iz</h3>
+        <div class="okr-card__items">
+          <div class="okr-card__item">Coklu platformda (video/ses/oyun) senkronize anlati ile kulturel iz birakma.</div>
+          <div class="okr-card__item">Uluslararasi musteri portfoyu olusturma.</div>
+          <div class="okr-card__item">AI destekli içerik üretiminde sektorde referans nokta olma.</div>
+        </div>
+      </div>
+      <div class="okr-card reveal">
+        <div class="okr-card__period">Uzun Vade</div>
+        <h3 class="okr-card__title">Pazar Standardi</h3>
+        <div class="okr-card__items">
+          <div class="okr-card__item">Trend terazisini tutan merkez olarak pazar standardini belirlemek.</div>
+          <div class="okr-card__item">İSTANBUL ve Mersin'den kuresel operasyonlara uzanmak.</div>
+          <div class="okr-card__item">Buyuk MEDYA devleriyle rekabet edebilir ajan ordusu kurmak.</div>
+        </div>
+      </div>
     </div>
 
-    <div class="sidebar">
-        <div class="hide-btn">
-            <i class="fa-solid fa-bars open-icon"></i>
-            <i class="fa-solid fa-times close-icon"></i>
+    <p class="section-label reveal" style="margin-top:var(--space-16);">nasıl Olcuyoruz?</p>
+    <h2 class="section-title reveal">BASARI METRIKLERI</h2>
+    <span class="section-title-line reveal" aria-hidden="true"></span>
+
+    <div class="metrics-grid">
+      <div class="metric-card reveal">
+        <div class="metric-card__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
-        <ul class="sidebar-list">
-            <li><a href="../../index.html">Spion Army</a></li>
-            <li><a href="../../froggpt/index.html">Portföy</a></li>
-            <li><a href="../../purplestore/index.html">Medya Store</a></li>
-            <li><a href="../../about/product/index.html">Medya Ürünleri</a></li>
-        </ul>
+        <h3 class="metric-card__title">Erisim x Etki</h3>
+        <p class="metric-card__desc">Izlenme suresi, donusum orani, topluluk büyümesi. Rakamlar konusur, BİZ dinleriz.</p>
+      </div>
+      <div class="metric-card reveal">
+        <div class="metric-card__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3 class="metric-card__title">Anlati güçu</h3>
+        <p class="metric-card__desc">Platformlar arasi tutarlilik, hatirlanma orani ve tekrar uretim kapasitesi.</p>
+      </div>
+      <div class="metric-card reveal">
+        <div class="metric-card__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3 class="metric-card__title">OPERASYON Kalitesi</h3>
+        <p class="metric-card__desc">Hiz, isabet, kaynak verimliligi ve kriz dayanikliligi. Brief'ten teslimata sure.</p>
+      </div>
     </div>
 
+    <p class="section-label reveal" style="margin-top:var(--space-16);">nasıl Basardik?</p>
+    <h2 class="section-title reveal">KAZANIMLAR</h2>
+    <span class="section-title-line reveal" aria-hidden="true"></span>
 
-    <!-- SAYFA İÇERİĞİ: Başarılar & Hedefler -->
-    <style>
-        .spion-section {
-            max-width: 980px;
-            margin: 0 auto 64px;
-            padding: 28px 28px 36px;
-            border: 1px solid #eee;
-            border-radius: 16px;
-            background: #fff;
-            box-shadow: 0 6px 28px rgba(0, 0, 0, .06);
-            font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-            color: #111
-        }
-
-        .spion-eyebrow {
-            font-size: .9rem;
-            letter-spacing: .06em;
-            text-transform: uppercase;
-            color: #6b7280;
-            margin: 0 0 6px
-        }
-
-        .spion-title {
-            font-size: 2rem;
-            line-height: 1.2;
-            margin: .25rem 0 12px
-        }
-
-        .spion-lead {
-            font-size: 1.12rem;
-            line-height: 1.75;
-            color: #374151;
-            margin: 0 0 16px
-        }
-
-        .spion-grid {
-            display: grid;
-            gap: 18px;
-            margin-top: 12px
-        }
-
-        .spion-grid.cols-2 {
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
-        }
-
-        .spion-card {
-            padding: 16px 18px;
-            border: 1px solid #eee;
-            border-radius: 12px;
-            background: #fafafa
-        }
-
-        .spion-list {
-            margin: 0;
-            padding-left: 18px
-        }
-
-        .spion-quote {
-            margin: 16px 0;
-            padding: 14px 16px;
-            border-left: 4px solid #111;
-            background: linear-gradient(90deg, #f9fafb, #fff);
-            font-weight: 600
-        }
-
-        .muted {
-            color: #6b7280
-        }
-
-        .badge {
-            display: inline-block;
-            background: #111;
-            color: #fff;
-            border-radius: 999px;
-            font-size: .78rem;
-            padding: 4px 10px;
-            margin-right: 6px
-        }
-
-        .okrs dt {
-            font-weight: 700;
-            margin-top: 8px
-        }
-
-        .okrs dd {
-            margin: 4px 0 0 0
-        }
-    </style>
-
-    <section class="spion-section" id="basarilar-ve-hedefler" aria-labelledby="hedef-title">
-        <p class="spion-eyebrow">Başarılar ve Hedefler</p>
-        <h2 class="spion-title" id="hedef-title">Görünenler Gerçeği Yansıtmaz</h2>
-        <p class="spion-lead">
-            Vizyonumuz; trendleri yeniden tanımlamak, kültürel dönüşümlere öncülük etmek ve değer ürettiğimiz her şeyi
-            hedeflediğimiz konuma stratejik olarak yerleştirmektir. Medyanın mantıksız dengesinde biz, dengeyi kuran
-            zekâyız.
-        </p>
-
-        <div class="spion-grid cols-2">
-            <div class="spion-card">
-                <span class="badge">Nasıl Başardık?</span>
-                <ul class="spion-list">
-                    <li>Sosyal platformlarda kitle inşası ve sürdürülebilir gelir modelleri.</li>
-                    <li>Kazanımları ekipman ve prodüksiyona yatırarak ölçek büyütme.</li>
-                    <li>Büyük prodüksiyonlarla iş birlikleri; yetenek kümelenmesiyle merkez üssü kurma.</li>
-                </ul>
-            </div>
-
-            <div class="spion-card">
-                <span class="badge">Hedef Haritası</span>
-                <dl class="okrs">
-                    <dt>Kısa Vade</dt>
-                    <dd>Seçilen trendlerde %100 görünürlük ve viral erişim pencereleri.</dd>
-                    <dt>Orta Vade</dt>
-                    <dd>Çoklu platformda (video/ses/oyun) senkronize anlatı ile kültürel iz bırakma.</dd>
-                    <dt>Uzun Vade</dt>
-                    <dd>Trend terazisini tutan merkez olarak pazar standardını belirlemek.</dd>
-                </dl>
-            </div>
+    <div class="achievement-row">
+      <div class="achievement-card reveal">
+        <div class="achievement-card__label">Operasyonel</div>
+        <h3 class="achievement-card__title">Sahada Kanitlanan Sonuclar</h3>
+        <div class="achievement-card__list">
+          <div class="achievement-card__item">sosyal platformlarda kitle insasi ve surdurulebilir gelir modelleri.</div>
+          <div class="achievement-card__item">Kazanimlari ekipman ve produksiyona yatirarak olcek buyutme.</div>
+          <div class="achievement-card__item">Buyuk produksiyonlarla is birlikleri; yetenek kumeslenmesiyle merkez ussu kurma.</div>
         </div>
-
-        <div class="spion-card" style="margin-top:18px">
-            <span class="badge">Başarı Ölçütleri</span>
-            <ul class="spion-list">
-                <li>Erişim × Etki: izlenme süresi, dönüşüm, topluluk büyümesi.</li>
-                <li>Anlatı Gücü: platformlar arası tutarlılık, hatırlanma ve tekrar üretim oranı.</li>
-                <li>Operasyon Kalitesi: hız, isabet, kaynak verimliliği ve kriz dayanıklılığı.</li>
-            </ul>
+      </div>
+      <div class="achievement-card reveal">
+        <div class="achievement-card__label">Musteri sonuçları</div>
+        <h3 class="achievement-card__title">Olculebilir Etkiler</h3>
+        <div class="achievement-card__list">
+          <div class="achievement-card__item">Beach club operasyonunda 4 haftada %340 takipci artisi.</div>
+          <div class="achievement-card__item">Lojistik firmasi için 3 uluslararasi musteri kazanimi.</div>
+          <div class="achievement-card__item">Butik otel için sezon oncesi doluluk artisi ve 3x Instagram büyümesi.</div>
         </div>
+      </div>
+    </div>
 
-        <div class="spion-quote">“Trendi biz seçeriz; sistemi yeniden yazar, sonucu kültüre çeviririz.”</div>
-        <p class="muted">Not: Gösteriş değil, etki. Süreç değil, sonuç. Estetik değil, üstünlük.</p>
-    </section>
+    <div class="final-quote reveal">
+      <p class="final-quote__text">"TRENDİ BİZ seceriz; sistemi Yeniden yazar, sonucu kultüre ceviririz."</p>
+      <p class="final-quote__sub">Gosteri değil, etki. Surec değil, sonuç. Estetik değil, ustunluk.</p>
+    </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <ul>
-                    <h1 class="footer-column-header">Medya Operasyonları</h1>
-                    <li><a href="../../investor/index.html">İşbirlikleri</a></li>
-                    <li><a href="../../sponsor/index.html">Sponsorlar</a></li>
-                </ul>
-            </div>
+  </div>
+</section>
 
-            <div class="footer-column">
-                <ul>
-                    <h1 class="footer-column-header">Hizmetler</h1>
-                    <li><a href="../../froggpt/index.html">Portföy</a></li>
-                    <li><a href="../../purplestore/index.html">Medya Store</a></li>
-                    <li><a href="../../contact/index.html">İletişim</a></li>
-                </ul>
-            </div>
+<div class="next-step">
+  <div class="container">
+    <p class="section-label next-step__label">Sonraki Adim</p>
+    <h2 class="next-step__title">Operasyona Katil</h2>
+    <div class="next-step__actions">
+      <a href="../../contact/index.html" class="btn btn-primary">Teklif Al &rarr;</a>
+      <a href="../../career/index.html" class="btn btn-ghost">Kariyer &rarr;</a>
+    </div>
+  </div>
+</div>
+</main>
 
-            <div class="footer-column">
-                <ul>
-                    <h1 class="footer-column-header">Spion Army</h1>
-                    <li><a href="../../about/vision/index.html">Vizyon & Misyon</a></li>
-                    <li><a href="../../about/history/index.html">Şirketin Tarihçesi</a></li>
-                    <li><a href="../../about/product/index.html">Ürünler ve Hizmetler</a></li>
-                    <li><a href="../../about/team/index.html">Ekip ve Liderlik</a></li>
-                    <li><a href="../../about/goal/index.html">Başarılar ve Gelecek Hedefleri</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <ul>
-                    <h1 class="footer-column-header">Yasal Şartlar</h1>
-                    <li><a href="../../legal/GP/index.html">Gizlilik Politikası</a></li>
-                    <li><a href="../../legal/KK/index.html">Kullanım Koşulları</a></li>
-                    <li><a href="../../legal/CP/index.html">Çerez Politikası</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <ul>
-                    <h1 class="footer-column-header">Şirket</h1>
-                    <li><a href="../../career/index.html">Kariyer</a></li>
-                </ul>
-            </div>
-
-            <div class="social-media">
-                <a href="https://www.instagram.com/spionarmy/?next=%2F" title="Instagram"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/spionarmy?trk=public_profile_topcard-current-company"
-                    title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.youtube.com/@spionarmy" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://medium.com/@spionarmy" title="Medium"><i class="fa-brands fa-medium"></i></a>
-            </div>
+<footer class="footer" role="contentinfo">
+  <div class="footer__watermark" aria-hidden="true">SPION MEDIA</div>
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="../../index.html" class="navbar__logo" style="display:inline-block;margin-bottom:var(--space-4);">SPION<span style="color:var(--color-text-primary)">MEDIA</span></a>
+        <p class="footer__brand-desc">sessiz işgal. Karsi Taraf PAZARLAMA olduğunu Fark etmez.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/spionmedia/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="https://t.me/spionmedia" target="_blank" rel="noopener" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.15.668-.543.832-1.1.517l-3.04-2.24-1.468 1.413c-.162.162-.298.298-.61.298l.217-3.08 5.6-5.058c.244-.217-.053-.337-.377-.12L7.04 14.42l-2.98-.93c-.648-.203-.66-.648.135-.96l11.64-4.49c.54-.196 1.012.12.727.208z"/></svg></a>
+          <a href="https://www.linkedin.com/company/spion-media" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.youtube.com/@spionmedia" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
         </div>
-
-        <!-- Copyright & Dil Değiştir -->
-        <div class="last-fot">
-            <div class="slect-lang">
-                <div class="lang-item">
-                    <h4 class="select-lang-text">English</h4>
-                    <!-- DİL DEĞİŞTİR: her sayfada spionarmy.com -->
-                    <a href="https://spionarmy.com" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-language"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2025 Spion Army. Tüm hakları saklıdır.
-            </div>
-        </div>
-    </footer>
-
-    <!-- SCROLL JS -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
-    <!-- MAIN JS (goal klasöründen köke göre) -->
-    <script src="../../main.js"></script>
+      </div>
+      <div>
+        <h3 class="footer__col-title">hakkımızda</h3>
+        <nav class="footer__col-links">
+          <a href="../vision/index.html">Vizyon &amp; Misyon</a>
+          <a href="../history/index.html">tarihçe</a>
+          <a href="../team/index.html">Ekip &amp; liderlik</a>
+          <a href="./index.html">Hedefler</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer__col-title">şirket</h3>
+        <nav class="footer__col-links">
+          <a href="../../products.html">HİZMETLER</a>
+          <a href="../../portfolio.html">Portfolyo</a>
+          <a href="../../career/index.html">Kariyer</a>
+          <a href="../../Blog/index.html">Blog</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer__col-title">Yasal</h3>
+        <nav class="footer__col-links">
+          <a href="../../legal/GP/index.html">gizliLİK politikası</a>
+          <a href="../../legal/KK/index.html">kullanım koşulları</a>
+          <a href="../../legal/CP/index.html">çerez politikası</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 Spion Media. tüm haklari saklidir.</p>
+      <div class="footer__email"><a href="mailto:spionmediaglobal@gmail.com">spionmediaglobal@gmail.com</a></div>
+    </div>
+  </div>
+</footer>
+<script src="../../spion-nav.js"></script>
 </body>
-
 </html>

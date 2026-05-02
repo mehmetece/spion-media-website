@@ -116,5 +116,38 @@ document.querySelector('.respo').addEventListener('click', function () {
     delay: 1300,
     reset: true,
   });
+
+  ScrollReveal().reveal('.team-hero', {
+    origin: 'top',
+    distance: '40px',
+    duration: 1000,
+    delay: 100,
+    reset: false,
+  });
+
+  ScrollReveal().reveal('.agent-card', {
+    origin: 'bottom',
+    distance: '40px',
+    duration: 800,
+    delay: 100,
+    interval: 120,
+    reset: false,
+  });
+
+  ScrollReveal().reveal('.principles-section', {
+    origin: 'bottom',
+    distance: '30px',
+    duration: 900,
+    delay: 100,
+    reset: false,
+  });
+
+  ScrollReveal().reveal('.team-join', {
+    origin: 'bottom',
+    distance: '40px',
+    duration: 900,
+    delay: 150,
+    reset: false,
+  });
   // SCROLL SECTION
   

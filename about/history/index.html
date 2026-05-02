@@ -1,381 +1,204 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
-
 <head>
-    <!-- Temel Meta -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- SEO Başlık -->
-    <title>Spion Army — Şirketin Tarihçesi</title>
-
-    <!-- Meta Açıklama -->
-    <meta name="description"
-        content="Spion Army’nin sokaklardan başlayan vizyonunun, prodüksiyon ve algoritmik medya operasyonlarına uzanan yolculuğu. Tarihçemizi ve kültürümüzü keşfedin." />
-
-    <!-- Robots -->
-    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-
-    <!-- Dil -->
-    <meta http-equiv="content-language" content="tr" />
-
-    <!-- Canonical & Alternatif Diller -->
-    <link rel="canonical" href="https://www.spionarmy.com.tr/about/history/" />
-    <link rel="alternate" hreflang="tr" href="https://www.spionarmy.com.tr/about/history/" />
-    <link rel="alternate" hreflang="en" href="https://www.spionarmy.com.tr/site-eng/about/history/" />
-    <link rel="alternate" hreflang="x-default" href="https://www.spionarmy.com.tr/about/history/" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="tr_TR" />
-    <meta property="og:site_name" content="Spion Army" />
-    <meta property="og:title" content="Spion Army — Şirketin Tarihçesi" />
-    <meta property="og:description"
-        content="Sokaktan büyüyen vizyon: Spion Army’nin kuruluş hikâyesi ve medya sahnesindeki yükselişi." />
-    <meta property="og:url" content="https://www.spionarmy.com.tr/about/history/" />
-    <meta property="og:image" content="https://www.spionarmy.com.tr/images/og/og-cover.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Spion Army — Şirketin Tarihçesi" />
-    <meta name="twitter:description" content="Spion Army’nin köklerinden bugüne uzanan yolculuğu." />
-    <meta name="twitter:image" content="https://www.spionarmy.com.tr/images/og/og-cover.jpg" />
-
-    <!-- Tema Rengi -->
-    <meta name="theme-color" content="#e6e1e9" />
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.spionarmy.com.tr/#org",
-        "name": "Spion Army",
-        "url": "https://www.spionarmy.com.tr/",
-        "logo": "https://www.spionarmy.com.tr/images/logos/square.png",
-        "email": "info@spionarmy.com.tr",
-        "sameAs": [
-          "https://www.instagram.com/spionarmy/",
-          "https://www.linkedin.com/company/spionarmy",
-          "https://www.youtube.com/@spionarmy",
-          "https://medium.com/@spionarmy"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://www.spionarmy.com.tr/about/history/#webpage",
-        "url": "https://www.spionarmy.com.tr/about/history/",
-        "name": "Şirketin Tarihçesi",
-        "isPartOf": { "@id": "https://www.spionarmy.com.tr/#org" },
-        "description": "Spion Army’nin kuruluş hikâyesi ve medya alanındaki gelişimi."
-      }
-    ]
-  }
-  </script>
-
-    <!-- Fontlar & Stil -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Proje Dosyaları -->
-    <link rel="stylesheet" href="../../styles.css" />
-    <link rel="shortcut icon" href="../../images/logos/favicon.png" type="image/x-icon" />
-    <link rel="icon" href="../../images/logos/favicon.png" sizes="32x32" />
-    <link rel="apple-touch-icon" href="../../images/logos/apple-touch-icon.png" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sirketin Tarihcesi — Spion Media</title>
+<meta name="description" content="Spion Media nasıl basladi? Sokaklardan buyuyen vizyon, MEDYA dunyasindaki yukselis ve bugunun OPERASYON merkezi."/>
+<link rel="canonical" href="https://media.spionarmy.com/about/history/"/>
+<link rel="icon" href="../../images/logos/favicon.png"/>
+<link rel="stylesheet" href="../../spion.css"/>
+<style>
+.timeline{position:relative;padding-left:var(--space-12);margin:var(--space-12) 0;}
+.timeline::before{content:"";position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--color-accent),var(--color-border));}
+.timeline-item{position:relative;margin-bottom:var(--space-12);}
+.timeline-item::before{content:"";position:absolute;left:calc(-1 * var(--space-12) - 4px);top:6px;width:9px;height:9px;border-radius:50%;background:var(--color-accent);border:2px solid var(--color-bg);}
+.timeline-item__year{font-family:var(--font-heading);font-size:0.8rem;letter-spacing:0.2em;color:var(--color-accent);margin-bottom:var(--space-2);}
+.timeline-item__title{font-family:var(--font-heading);font-size:1.4rem;color:var(--color-text-primary);margin-bottom:var(--space-4);}
+.timeline-item__text{font-size:0.88rem;color:var(--color-text-secondary);line-height:1.8;max-width:68ch;}
+.story-lead{font-size:1.1rem;color:var(--color-text-secondary);line-height:1.8;max-width:72ch;margin-bottom:var(--space-12);border-left:3px solid var(--color-accent);padding-left:var(--space-8);}
+.story-prose{font-size:0.92rem;color:var(--color-text-secondary);line-height:1.9;max-width:72ch;}
+.story-prose p{margin-bottom:var(--space-6);}
+.story-prose strong{color:var(--color-text-primary);}
+.quote-block{background:var(--color-surface);border:1px solid var(--color-border);border-left:3px solid var(--color-accent);border-radius:var(--radius-sharp);padding:var(--space-8) var(--space-12);margin:var(--space-12) 0;}
+.quote-block__text{font-family:var(--font-heading);font-size:clamp(1.2rem,2.5vw,1.8rem);color:var(--color-text-primary);line-height:1.3;}
+</style>
 </head>
-
 <body>
-    <!-- NAV -->
-    <nav class="navbar">
-        <div class="navbar-logo">
-            <img src="../../images/logos/square.png" alt="Spion Army Logo">
-            <h1 class="logo-text">Spion Army</h1>
+<nav class="navbar" role="navigation" aria-label="Ana navigasyon">
+  <div class="navbar__inner">
+    <a href="../../index.html" class="navbar__logo">SPION<span>MEDIA</span></a>
+    <div class="navbar__menu">
+      <a href="../../index.html" class="navbar__link">Ana Sayfa</a>
+      <a href="../../products.html" class="navbar__link">HİZMETLER</a>
+      <a href="../../portfolio.html" class="navbar__link">Portfolyo</a>
+      <div class="navbar__dropdown">
+        <button class="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">hakkımızda <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <div class="navbar__dropdown-menu" role="menu">
+          <a href="../vision/index.html" class="navbar__dropdown-item">Vizyon &amp; Misyon</a>
+          <a href="./index.html" class="navbar__dropdown-item" style="color:var(--color-accent)">tarihçe</a>
+          <a href="../team/index.html" class="navbar__dropdown-item">Ekip &amp; liderlik</a>
+          <a href="../goal/index.html" class="navbar__dropdown-item">Hedefler</a>
         </div>
-        <div class="navbar-list">
-            <ul class="list-item">
-                <li><a href="../../index.html">Spion Army</a></li>
-                <li><a href="../../froggpt/index.html">Portföy</a></li>
-                <li><a href="../../purplestore/index.html">Medya Store</a></li>
-                <li class="hide-item"><a href="../../contact/index.html">İletişim</a></li>
-                <li class="respo"><a href="#">Daha Fazla<i class="fa-solid fa-chevron-down"></i></a></li>
-            </ul>
-        </div>
-        <div class="last-nav">
-            <h1 class="user-text"><a href="../../career/index.html">Bize Katıl</a></h1>
-            <a href="../../career/index.html"><i class="fa-solid fa-plus"></i></a>
-        </div>
+      </div>
+      <a href="../../purplestore/index.html" class="navbar__link">MEDYA Store</a>
+      <a href="../../Blog/index.html" class="navbar__link">Blog</a>
+      <a href="../../contact/index.html" class="navbar__link">iletişim</a>
+    </div>
+    <div class="navbar__actions">
+      <button class="navbar__lang" data-lang-toggle aria-label="Dili değiştir" aria-pressed="false"><span data-lang-label>EN</span></button>
+      <a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Teklif Al</a>
+    </div>
+    <button class="navbar__hamburger" aria-label="menüyü ac" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="navbar__mobile-overlay" role="dialog" aria-label="Mobil menu">
+  <a href="../../index.html" class="navbar__mobile-link">Ana Sayfa</a>
+  <a href="../../products.html" class="navbar__mobile-link">HİZMETLER</a>
+  <a href="../../portfolio.html" class="navbar__mobile-link">Portfolyo</a>
+  <a href="../vision/index.html" class="navbar__mobile-sub">Vizyon &amp; Misyon</a>
+  <a href="./index.html" class="navbar__mobile-sub">tarihçe</a>
+  <a href="../team/index.html" class="navbar__mobile-sub">Ekip</a>
+  <a href="../goal/index.html" class="navbar__mobile-sub">Hedefler</a>
+  <a href="../../purplestore/index.html" class="navbar__mobile-link">MEDYA Store</a>
+  <a href="../../contact/index.html" class="navbar__mobile-link">iletişim</a>
+  <a href="https://t.me/spionmedia" target="_blank" rel="noopener" class="btn btn-primary navbar__mobile-cta">Teklif Al</a>
+</div>
+
+<div class="page-hero section--dark">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../../index.html">Ana Sayfa</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <a href="../vision/index.html">hakkımızda</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <span class="breadcrumb__current">tarihçe</span>
     </nav>
+    <p class="section-label page-hero__label">nasıl Basladi?</p>
+    <h1 class="page-hero__title">SIRKETIN<br>TARIHCESI</h1>
+    <p class="page-hero__sub">Sokaklardan buyuyen vizyon. Medyanin mantıksız dengesinde algoritma gibi dusunmeyi ogrendik.</p>
+  </div>
+</div>
 
-    <div class="hidebar-list">
-        <ul class="h-list-item">
-            <li><a href="../../contact/index.html">İletişim</a></li>
-        </ul>
+<main>
+<section class="section">
+  <div class="container">
+
+    <p class="story-lead reveal">
+      Sokaklardan baslayan bir dunya gorusu, bugun buyuk bir vizyona evrildi. insanları tanımakla baslayan yolculukta, kendim gibi dusunenlerin bir araya geldigi bir merkez ussu kurma hayaliyle yanip tutuştum.
+    </p>
+
+    <div class="story-prose reveal">
+      <p>
+        Erken yasta evimden ayrildim ve hakikati arama yolculuguna ciktim. Yolda buyudum, yasitlarimdan cok daha hizli buyudum. MEDYA benim için yalnizca bir arac degildi; hayatin varolis sebebiydi.
+      </p>
+      <p>
+        Bu dunyada kurallar farkli, dengeler mantiksizdı. 2 + 2 bazen 5'ti, bazen 0. <strong>algoritma gibi dusunmeye basladim:</strong> rastgele, mantik disi ama dogal. Farkli bir boyuta eristim. Bu artik benim isim degildi; ben isin ta kendisi olmuştum.
+      </p>
+      <p>
+        Gece gunduz demeden, tek yasam sebebime donustu bu yolculuk. sosyal MEDYA platformlarinda hesaplar gelistirdim, kitleler yonettim, kitleler uzerinden gelir elde ettim. Kazandıklarımla ekipmanlar aldim, daha buyuk capta islere soyundum. Yine kazandim, tekrar sahaya ciktim — cunku bu oyunu sevdim.
+      </p>
+      <p>
+        Buyuk produksiyonlarla calisma firsati yakaladim ve kazandigim MEDYA becerilerini, benden daha iyi olanlarla bir araya gelerek kurduğum bu sirkette taclandi. <strong>Bu sirkette kimse kimseden daha kotu olamaz;</strong> kimse kimsenin emir-komuta zincirinde degildir.
+      </p>
+      <p>
+        Gozumu buyuk MEDYA devlerine diktim. Ajan ordumla hepsini alt edeceğime inaniyorum. Lider benim, sorumluluk bende. Elimdeki güçu iyileri korumak ve kotulere kaptirmamak için kullanmak zorundayim.
+      </p>
     </div>
 
-    <div class="sidebar">
-        <div class="hide-btn">
-            <i class="fa-solid fa-bars open-icon"></i>
-            <i class="fa-solid fa-times close-icon"></i>
-        </div>
-        <ul class="sidebar-list">
-            <li><a href="../../index.html">Spion Army</a></li>
-            <li><a href="../../froggpt/index.html">Portföy</a></li>
-            <li><a href="../../purplestore/index.html">Medya Store</a></li>
-            <li><a href="../product/index.html">Medya Ürünleri</a></li>
-        </ul>
+    <div class="quote-block reveal">
+      <p class="quote-block__text">"Spion Media suslu MEDYA sirketlerine benzemez: TRENDİ yaratir, gercegi Yeniden yazar, sistemi Yeniden kurar."</p>
     </div>
 
+    <p class="section-label reveal" style="margin-top:var(--space-16);">Kilometre Taslari</p>
+    <h2 class="section-title reveal">YOLCULUK</h2>
+    <span class="section-title-line reveal" aria-hidden="true"></span>
 
-    <!-- ===== HISTORY / NASIL BAŞLADI (YENİ) ===== -->
-    <section class="history-section" aria-labelledby="history-title">
-        <style>
-            /* ——— TIPOGRAFI & YAPI ——— */
-            .history-section {
-                padding: clamp(18px, 4vw, 36px) 16px;
-                background: transparent;
-            }
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-item__year">başlangıç</div>
+        <h3 class="timeline-item__title">Sokaklardan DİJİTAL Sahaya</h3>
+        <p class="timeline-item__text">sosyal MEDYA platformlarinda ilk hesaplar, ilk kitleler, ilk gelir. Kazanilan her kuruş bir Sonraki operasyona yatirildi.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-item__year">büyüme</div>
+        <h3 class="timeline-item__title">Ekipman ve Uretim</h3>
+        <p class="timeline-item__text">Gelirler ekipmana donustu. Kamera, drone, ses ekipmani. Buyuk produksiyonlarla ilk is birlikleri kuruldu.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-item__year">KURULUŞ</div>
+        <h3 class="timeline-item__title">Spion Media Operasyona Basladi</h3>
+        <p class="timeline-item__text">Kendi alaninda ustun, sistemin tamamini goren DİJİTAL ajanlardan olusan ekip bir araya geldi. İSTANBUL ve Mersin'de iki merkez, tek OPERASYON.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-item__year">BUGUN</div>
+        <h3 class="timeline-item__title">9 Hizmet, 2 Sehir, 1 Ekip</h3>
+        <p class="timeline-item__text">Video produksiyondan AI hizmetlerine, drone cekimden marka mimarisine — 9 OPERASYON alanı, tek çatı altinda. sessiz işgal devam ediyor.</p>
+      </div>
+    </div>
 
-            .history-wrap {
-                max-width: 980px;
-                margin: 0 auto;
-                background: #fff;
-                border: 1px solid #ece9f1;
-                border-radius: 16px;
-                box-shadow: 0 10px 32px rgba(0, 0, 0, .06);
-                padding: clamp(18px, 3.6vw, 32px);
-            }
+  </div>
+</section>
 
-            .history-eyebrow {
-                margin: 0 0 6px 0;
-                font-size: .86rem;
-                letter-spacing: .12em;
-                text-transform: uppercase;
-                color: var(--paragraph-color);
-            }
+<div class="next-step">
+  <div class="container">
+    <p class="section-label next-step__label">Sonraki Adim</p>
+    <h2 class="next-step__title">Ekibi Tani</h2>
+    <div class="next-step__actions">
+      <a href="../team/index.html" class="btn btn-primary">Ekip &amp; liderlik &rarr;</a>
+      <a href="../goal/index.html" class="btn btn-ghost">Hedefler &rarr;</a>
+    </div>
+  </div>
+</div>
+</main>
 
-            .history-title {
-                margin: 0 0 8px 0;
-                color: var(--text-color);
-                font-size: clamp(1.6rem, 2.6vw, 2.2rem);
-                line-height: 1.2;
-                font-weight: 700;
-            }
-
-            .history-lead {
-                margin: 0 0 14px 0;
-                color: var(--paragraph-color);
-                font-size: clamp(1rem, 1.2vw, 1.1rem);
-                line-height: 1.7;
-                max-width: 72ch;
-                text-wrap: pretty;
-            }
-
-            .history-prose {
-                max-width: 72ch;
-                color: var(--paragraph-color);
-                font-size: clamp(.98rem, 1.05vw, 1.05rem);
-                line-height: 1.9;
-                hyphens: auto;
-                hanging-punctuation: first allow-end;
-                text-wrap: pretty;
-            }
-
-            .history-prose p {
-                margin: 0 0 14px 0;
-            }
-
-            .history-prose p:last-child {
-                margin-bottom: 0;
-            }
-
-            /* İlk paragrafta hafif vurgulu dropcap (masaüstünde) */
-            @media (min-width: 768px) {
-                .history-prose p:first-of-type::first-letter {
-                    float: left;
-                    font-size: 3.2rem;
-                    line-height: .9;
-                    padding-right: .18rem;
-                    margin-top: .2rem;
-                    font-weight: 700;
-                    color: var(--bold-color);
-                }
-            }
-
-            /* Sol şerit: marka rengi ile minimal vurgu */
-            .history-wrap {
-                position: relative;
-                overflow: clip;
-            }
-
-            .history-wrap::before {
-                content: "";
-                position: absolute;
-                inset: 0 0 0 auto;
-                width: 6px;
-                background: linear-gradient(180deg, var(--bold-color), #b58ad0 60%, var(--accent-color));
-                opacity: .18;
-                border-top-right-radius: 16px;
-                border-bottom-right-radius: 16px;
-            }
-
-            /* Küçük ekran optimizasyonları */
-            @media (max-width: 600px) {
-                .history-wrap {
-                    border-radius: 12px;
-                }
-
-                .history-lead,
-                .history-prose {
-                    line-height: 1.85;
-                }
-            }
-        </style>
-
-        <div class="history-wrap">
-            <header class="history-header">
-                <p class="history-eyebrow">Şirketin Tarihçesi</p>
-                <h1 id="history-title" class="history-title">Nasıl Başladı?</h1>
-                <p class="history-lead">
-                    Sokaklardan başlayan bir dünya görüşü, bugün büyük bir vizyona evrildi. Medyanın mantıksız
-                    dengesinde
-                    algoritma gibi düşünmeyi öğrendik; süreç değil sonuç, gösteriş değil etki peşinde koştuk.
-                </p>
-            </header>
-
-            <article class="history-prose">
-                <p>
-                    Sokaklardan başlayan bir dünya görüşü, bugün büyük bir vizyona evrildi. İnsanları tanımakla başlayan
-                    yolculuğumda,
-                    kendim gibi düşünenlerin bir araya geldiği bir merkez üssü kurma hayaliyle yanıp tutuştum. Erken
-                    yaşta evimden
-                    ayrıldım ve hakikati arama yolculuğuna çıktım. Yolda büyüdüm, yaşıtlarımdan çok daha hızlı büyüdüm.
-                </p>
-                <p>
-                    Medya benim için yalnızca bir araç değildi; hayatın varoluş sebebiydi. Bu dünyada kurallar farklı,
-                    dengeler
-                    mantıksızdı. 2 + 2 bazen 5’ti, bazen 0. Algoritma gibi düşünmeye başladım: rastgele, mantık dışı ama
-                    doğal.
-                    Farklı bir boyuta eriştim. Bu artık benim işim değildi; ben işin ta kendisi olmuştum.
-                </p>
-                <p>
-                    Gece gündüz demeden, tek yaşam sebebime dönüştü bu yolculuk. Sosyal medya platformlarında hesaplar
-                    geliştirdim,
-                    kitleler yönettim, kitleler üzerinden gelir elde ettim. Kazandıklarımla ekipmanlar aldım, daha büyük
-                    çapta işlere
-                    soyundum. Yine kazandım, tekrar sahaya çıktım — çünkü bu oyunu sevdim.
-                </p>
-                <p>
-                    Büyük prodüksiyonlarla çalışma fırsatı yakaladım ve kazandığım medya becerilerini, benden daha iyi
-                    olanlarla bir
-                    araya gelerek kurduğum bu şirkette taçlandırdım. Bu şirkette kimse kimseden daha kötü olamaz; kimse
-                    kimsenin
-                    emir-komuta zincirinde değildir. Her bir ekip üyesi, özel olarak yetişmiş bir dijital ajandır;
-                    insanüstü bir
-                    zihniyete sahip olup tek pencereden bakmazlar.
-                </p>
-                <p>
-                    Gözümü büyük medya devlerine diktim. Ajan ordumla hepsini alt edeceğime inanıyorum. Lider benim,
-                    sorumluluk bende.
-                    Elimdeki gücü iyileri korumak ve kötülere kaptırmamak için kullanmak zorundayım. Ben kimse değilim;
-                    sistemin
-                    yansımasıyım. Burada kimsenin bireysel özelliği yoktur. Herkesin yeri doldurulabilir. Ya en iyisi
-                    olursun ya da hiç
-                    var olmazsın. Spion Army süslü medya şirketlerine benzemez: Trendi yaratır, gerçeği yeniden yazar,
-                    sistemi yeniden kurar.
-                </p>
-            </article>
+<footer class="footer" role="contentinfo">
+  <div class="footer__watermark" aria-hidden="true">SPION MEDIA</div>
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="../../index.html" class="navbar__logo" style="display:inline-block;margin-bottom:var(--space-4);">SPION<span style="color:var(--color-text-primary)">MEDIA</span></a>
+        <p class="footer__brand-desc">sessiz işgal. Karsi Taraf PAZARLAMA olduğunu Fark etmez.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/spionmedia/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="https://t.me/spionmedia" target="_blank" rel="noopener" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.15.668-.543.832-1.1.517l-3.04-2.24-1.468 1.413c-.162.162-.298.298-.61.298l.217-3.08 5.6-5.058c.244-.217-.053-.337-.377-.12L7.04 14.42l-2.98-.93c-.648-.203-.66-.648.135-.96l11.64-4.49c.54-.196 1.012.12.727.208z"/></svg></a>
+          <a href="https://www.linkedin.com/company/spion-media" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.youtube.com/@spionmedia" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
         </div>
-    </section>
-    <!-- ===== /HISTORY / NASIL BAŞLADI ===== -->
-
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <ul>
-                    <h1 class="footer-column-header">Medya Operasyonları</h1>
-                    <li><a href="../../investor/index.html">İşbirlikleri</a></li>
-                    <li><a href="../../sponsor/index.html">Sponsorlar</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <ul>
-                    <h1 class="footer-column-header">Hizmetler</h1>
-                    <li><a href="../../froggpt/index.html">Portföy</a></li>
-                    <li><a href="../../purplestore/index.html">Medya Store</a></li>
-                    <li><a href="../product/index.html">İletişim</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <ul>
-                    <h1 class="footer-column-header">Spion Army</h1>
-                    <li><a href="../vision/index.html">Vizyon & Misyon</a></li>
-                    <li><a href="./index.html">Şirketin Tarihçesi</a></li>
-                    <li><a href="../product/index.html">Ürünler ve Hizmetler</a></li>
-                    <li><a href="../team/index.html">Ekip ve Liderlik</a></li>
-                    <li><a href="../goal/index.html">Başarılar ve Gelecek Hedefleri</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <ul>
-                    <h1 class="footer-column-header">Yasal Şartlar</h1>
-                    <li><a href="../../legal/GP/index.html">Gizlilik Politikası</a></li>
-                    <li><a href="../../legal/KK/index.html">Kullanım Koşulları</a></li>
-                    <li><a href="../../legal/CP/index.html">Çerez Politikası</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <ul>
-                    <h1 class="footer-column-header">Şirket</h1>
-                    <li><a href="../../career/index.html">Kariyer</a></li>
-                </ul>
-            </div>
-
-            <div class="social-media">
-                <a href="https://www.instagram.com/spionarmy/" title="Instagram"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/spionarmy" title="LinkedIn"><i
-                        class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.youtube.com/@spionarmy" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://medium.com/@spionarmy" title="Medium"><i class="fa-brands fa-medium"></i></a>
-            </div>
-        </div>
-
-        <div class="last-fot">
-            <div class="slect-lang">
-                <div class="lang-item">
-                    <h4 class="select-lang-text">English</h4>
-                    <!-- Dil değiştirme: spionarmy.com -->
-                    <a href="https://spionarmy.com"><i class="fa-solid fa-language"></i></a>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2025 Spion Army. Tüm hakları saklıdır.
-            </div>
-        </div>
-    </footer>
-
-    <!-- SCROLL JS -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
-    <!-- MAIN JS -->
-    <script src="../../main.js"></script>
+      </div>
+      <div>
+        <h3 class="footer__col-title">hakkımızda</h3>
+        <nav class="footer__col-links">
+          <a href="../vision/index.html">Vizyon &amp; Misyon</a>
+          <a href="./index.html">tarihçe</a>
+          <a href="../team/index.html">Ekip &amp; liderlik</a>
+          <a href="../goal/index.html">Hedefler</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer__col-title">şirket</h3>
+        <nav class="footer__col-links">
+          <a href="../../products.html">HİZMETLER</a>
+          <a href="../../portfolio.html">Portfolyo</a>
+          <a href="../../career/index.html">Kariyer</a>
+          <a href="../../Blog/index.html">Blog</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer__col-title">Yasal</h3>
+        <nav class="footer__col-links">
+          <a href="../../legal/GP/index.html">gizliLİK politikası</a>
+          <a href="../../legal/KK/index.html">kullanım koşulları</a>
+          <a href="../../legal/CP/index.html">çerez politikası</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 Spion Media. tüm haklari saklidir.</p>
+      <div class="footer__email"><a href="mailto:spionmediaglobal@gmail.com">spionmediaglobal@gmail.com</a></div>
+    </div>
+  </div>
+</footer>
+<script src="../../spion-nav.js"></script>
 </body>
-
 </html>
